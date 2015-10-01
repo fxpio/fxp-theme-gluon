@@ -41,6 +41,8 @@
     function DestroyFootable(element) {
         var $ft = $(element);
 
+        $(window).off('.footable');
+
         $('th, td', $ft)
             .removeClass('footable-visible footable-first-column footable-last-column')
             .css('display', '');
