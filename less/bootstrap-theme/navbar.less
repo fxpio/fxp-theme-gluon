@@ -52,13 +52,6 @@
     }
 }
 
-.btn-sidebar-toggle,
-.btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
-    + .navbar-brand-switch {
-        padding-left: 0;
-    }
-}
-
 .fa-navbar-toggle:before {
     content: @navbar-default-toggle-fa-icon;
 }
@@ -107,7 +100,7 @@
     }
 
     .navbar-brand-switch {
-        padding-left: 2px;
+        padding-left: @navbar-padding-horizontal;
         padding-right: 2px;
     }
 
@@ -115,6 +108,14 @@
         white-space: normal;
         padding: 0 @navbar-padding-horizontal;
         line-height: @navbar-height;
+    }
+}
+
+.btn-sidebar-toggle,
+.btn-sidebar-toggle + .btn-sidebar-toggle.pull-right {
+    + .navbar-brand-switch,
+    + .btn-group .navbar-brand-switch {
+        padding-left: 0;
     }
 }
 
