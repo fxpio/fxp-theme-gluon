@@ -92,7 +92,7 @@
 .wrapper-dropdown-position-mask {
     &.wrapper-dropdown-fab.wrapper-mask-content {
         opacity: 0;
-        z-index: inherit !important;
+        z-index: (@zindex-navbar - 1) !important;
         background-color: @fab-mask-background-bg;
         .transition(opacity @transition);
 
