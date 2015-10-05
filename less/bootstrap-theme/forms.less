@@ -284,10 +284,11 @@ select {
             &:after {
                 content: '';
                 cursor: pointer;
+                position: absolute;
+                z-index: 1;
             }
 
             &:before {
-                position: absolute;
                 display: inline-block;
                 margin: 0;
                 width: @input-radio-checkbox-size;
@@ -297,17 +298,14 @@ select {
                 background-color: @input-unchecked-bg;
                 border: 2px solid @input-border;
                 vertical-align: top;
-                z-index: 1;
                 .transition(@input-radio-checkbox-transition);
             }
 
             &:after {
-                position: absolute;
                 width: 0;
                 height: 0;
                 top: @input-radio-checkbox-size / 2 - 1;
                 left: @input-radio-checkbox-size / 2 - 1;
-                z-index: 1;
                 .transition(@input-radio-checkbox-transition);
             }
 
