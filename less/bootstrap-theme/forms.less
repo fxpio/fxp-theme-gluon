@@ -35,6 +35,12 @@ textarea {
     resize: none;
 }
 
+.form-group {
+    &:first-child {
+        margin-top: @form-group-first-margin-top;
+    }
+}
+
 .form-group,
 .floating-group {
     position: relative;
@@ -55,6 +61,10 @@ textarea {
         &.fixed-floating-label {
             ~ label:not(.btn) {
                 .form-floating-label-top();
+
+                &.control-label.required::after, {
+                    opacity: 0;
+                }
             }
         }
 
