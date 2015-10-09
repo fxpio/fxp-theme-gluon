@@ -13,7 +13,7 @@ select {
 .select2-container--default {
     .select2-selection {
         position: relative;
-        font-weight: @btn-font-weight;
+        font-weight: @font-family-weight;
         border: none;
         border-bottom: 1px solid @input-border;
         outline: none;
@@ -27,7 +27,7 @@ select {
     }
 
     .select2-selection--single {
-        padding: @padding-base-vertical (@btn-padding-horizontal * 1.5) @padding-base-vertical @btn-padding-horizontal;
+        padding: @padding-base-vertical (@btn-padding-horizontal * 1.5) @padding-base-vertical (@padding-base-vertical / 2);
         overflow: hidden;
 
         .select2-selection__rendered,
