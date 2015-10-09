@@ -16,6 +16,12 @@
         border: none;
         border-bottom: 1px solid transparent;
         background-color: transparent;
+        vertical-align: top;
+        line-height: @line-height-base;
+
+        &:first-child {
+            min-width: 70px;
+        }
     }
 }
 
@@ -33,6 +39,23 @@
         input,
         textarea {
             border-bottom: 1px solid @input-border;
+        }
+    }
+
+    .input-group {
+        &.bootstrap-filestyle {
+            width: 100%;
+        }
+    }
+}
+
+// Collection
+// -------------------------
+
+.input-group {
+    .form-collection-row {
+        .input-group {
+            width: 100%;
         }
     }
 }
