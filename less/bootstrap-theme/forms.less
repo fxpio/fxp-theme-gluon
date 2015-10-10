@@ -38,6 +38,12 @@ textarea {
 .form-group {
     &:first-child {
         margin-top: @form-group-first-margin-top;
+
+        .form-group {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
     }
 }
 
