@@ -84,13 +84,20 @@ textarea {
         }
     }
 
-    label.top-floating-label {
+    label.top-floating-label,
+    label.top-floating-label-choice {
         .form-floating-label();
+
+        + div[data-prototype] {
+            min-height: 10px;
+        }
+    }
+
+    label.top-floating-label {
         .form-floating-label-top();
     }
 
     label.top-floating-label-choice {
-        .form-floating-label();
         .form-floating-label-top(-5);
     }
 
