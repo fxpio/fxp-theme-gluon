@@ -6,6 +6,18 @@
 // -------------------------
 .input-group-addon {
     border-radius: @input-border-radius;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+
+    &:empty {
+        padding: 0;
+    }
 }
 
 // Floating label
@@ -20,7 +32,18 @@
         line-height: @line-height-base;
 
         &:first-child {
-            min-width: 70px;
+             min-width: 70px;
+         }
+    }
+}
+
+div[class*="col-"] {
+    > .input-group {
+        .input-group-addon,
+        .input-group-btn {
+            &:first-child {
+                min-width: inherit;
+            }
         }
     }
 }
