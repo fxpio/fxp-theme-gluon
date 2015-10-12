@@ -1,0 +1,90 @@
+//
+// Block field groups
+// --------------------------------------------------
+
+// Block field groups
+// -------------------------
+
+.field-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+
+    &[class*="col-"] {
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .block-control {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+// Display as table-cell
+// -------------------------
+.field-group-addon,
+.field-group .block-control {
+    display: table-cell;
+    height: @input-height-base;
+    vertical-align: top;
+
+    &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+}
+
+// Addon and addon wrapper for buttons
+.field-group-addon {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+// Text field groups
+// -------------------------
+.field-group-addon {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    font-size: @font-size-base;
+    font-weight: @font-family-weight;
+    vertical-align: top;
+    line-height: @line-height-base;
+    color: @text-color;
+    text-align: center;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+
+    &:empty {
+        padding: 0;
+    }
+}
+
+// Floating label
+// -------------------------
+
+.field-group {
+    .field-group-addon {
+        &:first-child {
+            min-width: 70px;
+        }
+    }
+}
+
+div[class*="col-"] {
+    > .field-group {
+        .field-group-addon {
+            &:first-child {
+                min-width: inherit;
+            }
+        }
+    }
+}
