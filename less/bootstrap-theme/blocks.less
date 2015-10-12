@@ -195,6 +195,19 @@
 .block-control-color(warning);
 .block-control-color(danger);
 
+// Floating Label
+// --------------------------------------------------
+
+.floating-group {
+    .block-label {
+        &.top-floating-label,
+        &.top-floating-label-choice {
+            .form-floating-label(@block-floating-label-color);
+            .form-floating-label-top();
+        }
+    }
+}
+
 // Responsive
 // --------------------------------------------------
 
