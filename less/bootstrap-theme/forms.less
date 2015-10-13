@@ -35,6 +35,11 @@ textarea {
     resize: none;
 }
 
+.help-block {
+    font-size: round(@font-size-base * 0.85);
+    padding-left: 15px;
+}
+
 .form-group {
     &:first-child {
         margin-top: @form-group-first-margin-top;
@@ -123,10 +128,6 @@ textarea {
         &:after {
             right: 50%;
         }
-    }
-
-    .help-block {
-        font-size: round(@font-size-base * 0.85);
     }
 
     &.form-control {
