@@ -132,6 +132,17 @@ div[class*="col-"] {
     }
 }
 
+.has-error {
+    .input-group {
+        &.bootstrap-filestyle {
+            input,
+            textarea {
+                border-bottom-color: @state-danger-border;
+            }
+        }
+    }
+}
+
 // Collection
 // -------------------------
 
