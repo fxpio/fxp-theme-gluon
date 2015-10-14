@@ -210,5 +210,19 @@ select {
         .select2-selection {
             border-bottom-color: @state-danger-border;
         }
+
+        &.select2-container--focus,
+        &.select2-container--open {
+            .select2-selection.select2-selection--multiple {
+                border-bottom-color: @state-danger-border;
+            }
+        }
+    }
+
+    .select2-container--focus,
+    .select2-container--open {
+        .select2-selection {
+            .box-shadow(none);
+        }
     }
 }
