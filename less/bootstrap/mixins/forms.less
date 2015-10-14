@@ -155,13 +155,19 @@
 .form-control-state(@style; @color; @bg; @border) {
     .form-group,
     .floating-group {
-        &.has-@{style} {
+        &.has-@{style},
+        .has-@{style} & {
             input,
             textarea {
                 border-bottom-color: @border;
 
+                &.form-control {
+                    .box-shadow(none);
+                }
+
                 &,
-                &:focus {
+                &:focus,
+                &:active {
                     .box-shadow(none);
                 }
 

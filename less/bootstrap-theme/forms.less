@@ -260,6 +260,10 @@ select {
             }
         }
 
+        + .help-block {
+            float: left;
+        }
+
         &[disabled],
         &[readonly],
         fieldset[disabled] & {
@@ -284,6 +288,30 @@ select {
             &.fixed-floating-label {
                 ~ label:not(.btn) {
                     color: @input-color-placeholder-disabled;
+                }
+            }
+        }
+    }
+}
+
+.has-error {
+    select {
+        &.form-control {
+            .box-shadow(none);
+
+            &:focus,
+            &:active {
+                border-bottom-color: transparent;
+                .box-shadow(@dropdown-shadow);
+            }
+
+            &[disabled],
+            &[readonly],
+            fieldset[disabled] & {
+                &:focus,
+                &:active {
+                    .box-shadow(none);
+                    border-bottom-color: @input-border-disabled;
                 }
             }
         }
