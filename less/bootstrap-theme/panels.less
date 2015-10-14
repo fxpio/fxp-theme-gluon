@@ -191,6 +191,8 @@
     }
 
     .panel-row {
+        margin-bottom: 15px;
+
         + .panel-row {
             border-top: 1px solid @panel-inner-row-border;
         }
@@ -218,10 +220,12 @@
                 margin-bottom: 0;
                 padding-top: 10px;
                 padding-bottom: 10px;
-                padding-right: 2px;
+                padding-right: 6px;
 
                 &.required:after {
-                    top: 0;
+                    top: 5px;
+                    margin-left: -1px;
+                    font-size: 14px;
                 }
 
                 + .block-control {
@@ -236,10 +240,34 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
 
+                &.block-repeated {
+                    padding-top: 0;
+
+                    .form-group {
+                        margin-bottom: 10px;
+
+                        .control-label {
+                            font-size: 11px;
+                        }
+                    }
+                }
+
                 > .form-control,
                 > .checkbox,
                 > .radio {
                     margin-top: -10px;
+                }
+
+                .form-group {
+                    margin-top: 10px;
+                }
+
+                .form-collection-row {
+                    margin-top: 0;
+                }
+
+                .btn.btn-add {
+                    margin-top: 6px;
                 }
             }
 
