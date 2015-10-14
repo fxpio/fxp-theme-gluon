@@ -48,7 +48,18 @@
     }
 }
 
-div[class*="col-"],
+div[class*="col-"] {
+    > .input-group {
+        .input-group-addon,
+        .input-group-btn {
+            &:first-child {
+                min-width: inherit;
+            }
+        }
+    }
+}
+
+
 .control-label + .block-control,
 .control-label + .panel-block-help + .block-control {
     .input-group {
