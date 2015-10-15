@@ -396,9 +396,12 @@
 
 @media (min-width: @screen-sm-min) {
     // fix vertical align of last cell
-    .panel-cell {
-        &:last-child {
-            margin-top: -5px;
+    .panel-row:first-child,
+    .panel-section-heading + .panel-row {
+        .panel-cell {
+            &:last-child {
+                margin-top: -5px;
+            }
         }
     }
 }
