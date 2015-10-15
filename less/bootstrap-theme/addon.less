@@ -65,20 +65,6 @@
     margin-right: 0;
 }
 
-.control-label.required::after, {
-    content: "*";
-    color: @brand-danger;
-    font-size: @font-size-large;
-    position: absolute;
-    margin-left: floor(@padding-large-horizontal / 2 - @padding-large-horizontal * 0.14);
-    top: -(floor(@padding-large-horizontal / 2 - @padding-large-horizontal * 0.14));
-    .transition-transform(.2s cubic-bezier(.4,0,.2,1));
-}
-
-.form-horizontal .control-label.required::after {
-    top: 0;
-}
-
 .form-static-empty {
     font-style: italic;
     color: @gray-light;

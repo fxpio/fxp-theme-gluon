@@ -8,3 +8,21 @@
         color: @@color;
     }
 }
+
+.control-label() {
+    font-weight: @font-family-weight;
+
+    label {
+        font-weight: @font-family-weight;
+    }
+
+    &.required::after, {
+        content: "*";
+        color: @brand-danger;
+        font-size: @font-size-base;
+        position: absolute;
+        margin-left: floor(@padding-large-horizontal / 2 - @padding-large-horizontal * 0.14);
+        top: -(floor(@padding-large-horizontal / 2 - @padding-large-horizontal * 0.14));
+        .transition-transform(.2s cubic-bezier(.4,0,.2,1));
+    }
+}

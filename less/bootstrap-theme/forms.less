@@ -40,6 +40,18 @@ textarea {
     padding-left: 15px;
 }
 
+.form-label {
+    .control-label();
+    text-align: right;
+    padding-top: 10px;
+
+    .form-horizontal & {
+        &.required::after {
+            top: 0;
+        }
+    }
+}
+
 .form-group {
     &:first-child {
         margin-top: @form-group-first-margin-top;
