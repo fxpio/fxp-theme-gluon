@@ -307,6 +307,59 @@
                 padding-right: 2px;
             }
         }
+
+        > .panel-cell-wrapper-pref {
+            padding-left: 15px;
+            padding-right: 15px;
+            display: table;
+            width: 100%;
+
+            > .ripple {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .block-control,
+            .panel-block-help,
+            .field-group-addon,
+            .field-group-btn {
+                display: table-cell;
+                padding: 20px 0;
+            }
+
+            .field-group-addon,
+            .field-group-btn {
+                padding-left: 10px;
+                padding-right: 10px;
+                vertical-align: top;
+
+                &:first-child {
+                    min-width: 60px;
+                    text-align: left;
+                }
+            }
+
+            .block-control {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .control-label {
+                font-weight: @font-family-weight-bold;
+                font-size: ceil(@font-size-base * 1.1);
+            }
+
+            .panel-block-help {
+                width: 0;
+                max-width: 1px;
+                vertical-align: top;
+
+                .btn {
+                    position: absolute;
+                    top: 20px;
+                }
+            }
+        }
     }
 
     .panel-cell-spacer {
@@ -419,7 +472,7 @@
     // fix vertical align of last cell
     .panel-row:first-child,
     .panel-section-heading + .panel-row {
-        .panel-cell {
+        .panel-cell:not(.panel-cell-pref) {
             &:last-child {
                 margin-top: -5px;
             }
@@ -469,6 +522,14 @@
 .panel-variant-lite(info, @brand-info);
 .panel-variant-lite(warning, @brand-warning);
 .panel-variant-lite(danger, @brand-danger);
+
+.panel-variant-pref(default, @text-color);
+.panel-variant-pref(primary, @brand-primary);
+.panel-variant-pref(accent, @brand-accent);
+.panel-variant-pref(success, @brand-success);
+.panel-variant-pref(info, @brand-info);
+.panel-variant-pref(warning, @brand-warning);
+.panel-variant-pref(danger, @brand-danger);
 
 .panel-variant-label(default, @text-color);
 .panel-variant-label(primary, @brand-primary);

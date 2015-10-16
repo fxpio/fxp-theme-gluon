@@ -274,6 +274,128 @@
     }
 }
 
+.panel-variant-pref(@style; @heading-color) {
+    .panel {
+        &.panel-@{style}-pref {
+            > .panel-heading {
+                color: @heading-color;
+                border-color: transparent;
+                padding-left: 40px;
+
+                .panel-actions {
+                    color: @text-color;
+                }
+            }
+
+            > .panel-heading,
+            > .panel-footer {
+                border-color: transparent;
+                background-color: transparent;
+
+                > .panel-buttons {
+                    border-color: transparent;
+                    background-color: transparent;
+                }
+            }
+
+            .panel-cell {
+                > .panel-cell-wrapper-pref {
+                    > .block-control,
+                    > .field-group-addon,
+                    > .field-group-btn {
+                        border: none;
+                        border-bottom: 1px solid @panel-inner-border;
+                    }
+
+                    > .field-group-addon {
+                        color: @heading-color;
+                    }
+
+                    &.disabled {
+                        > .block-control,
+                        > .field-group-addon {
+                            color: @btn-link-disabled-color;
+                        }
+
+                        > .block-control {
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+
+            .panel-row {
+                margin-bottom: 0;
+
+                + .panel-row {
+                    border-top: none;
+                }
+            }
+
+            @media (max-width: @screen-xs-max) {
+                .panel-row {
+                    &:last-child {
+                        .panel-cell:last-child {
+                            .block-control,
+                            .field-group-addon,
+                            .field-group-btn {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+
+                &.panel-main {
+                    > .panel-heading {
+                        padding-left: 10px;
+                    }
+
+                    > .panel-section,
+                    .panel-cell,
+                    .panel-cell-wrapper-pref {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    .panel-cell {
+                        > .panel-cell-wrapper-pref {
+                            > .field-group-addon,
+                            > .field-group-btn {
+                                border-bottom-color: transparent;
+                            }
+                        }
+                    }
+
+                    .panel-block-help {
+                        .btn {
+                            margin-left: -20px;
+                        }
+                    }
+
+                    .panel-row {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            @media (min-width: @screen-sm-min) {
+                .panel-row {
+                    &:last-child {
+                        .panel-cell {
+                            .block-control,
+                            .field-group-addon,
+                            .field-group-btn {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .panel-variant-label(@style; @color) {
     .panel {
         .panel-cell {
