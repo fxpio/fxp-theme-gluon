@@ -423,20 +423,22 @@
 @media (min-width: (@screen-sm-max + 1)) {
     .btn-sidebar-toggle,
     .btn-group.btn-sidebar-toggle .btn {
-        &.sidebar-locked-toggle {
+        &.sidebar-locked-toggle,
+        &.sidebar-locked-toggle-disabled {
             display: none;
         }
     }
 
-    .btn-sidebar-toggle.sidebar-locked-toggle,
-    .btn-sidebar-toggle.sidebar-locked-toggle + .btn-sidebar-toggle.pull-right {
-        + .navbar-brand,
-        + div .navbar-brand {
-            width: @navbar-brand-width;
+    .btn-sidebar-toggle {
+        &.sidebar-locked-toggle {
+            + .navbar-brand,
+            + div .navbar-brand {
+                width: @navbar-brand-width;
 
-            &.sidebar-full-locked {
-                margin-left: @navbar-brand-width;
-                width: auto;
+                &.sidebar-full-locked {
+                    margin-left: @navbar-brand-width;
+                    width: auto;
+                }
             }
         }
     }
