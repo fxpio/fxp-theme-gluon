@@ -3,7 +3,7 @@
 {% set title = 'Floating Action Buttons' %}
 
 {% block container %}
-<div class="btn-group dropup btn-group-fab-bottom-right">
+<div class="btn-group dropup btn-group-fab-bottom-right" data-headroom data-scroller=".container-main" data-tolerance="5">
     <button type="button" tabindex="1" class="btn btn-accent btn-fab btn-ripple dropdown-toggle" data-toggle="dropdown">
         <i class="fa fa-times btn-fab-icon-open"></i>
         <i class="fa fa-plus"></i>
