@@ -7,6 +7,18 @@
     bottom: 22px;
     right: 40px;
     z-index: @zindex-fab-global;
+
+    &.headroom {
+        .transition(0.2s ease);
+    }
+
+    &.headroom--pinned {
+        .transform(translateY(0));
+    }
+
+    &.headroom--unpinned {
+        .transform(translateY(77px));
+    }
 }
 
 .btn {
