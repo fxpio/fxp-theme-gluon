@@ -4,6 +4,18 @@
 
 .navbar {
     height: @navbar-height;
+
+    &.headroom {
+        .transition(0.2s ease);
+    }
+
+    &.headroom--pinned {
+        .transform(translateY(0%));
+    }
+
+    &.headroom--unpinned {
+        .transform(translateY(-100%));
+    }
 }
 
 .navbar-brand {
@@ -133,6 +145,10 @@
     &.navbar-static-top {
         &.affix {
             .box-shadow(@navbar-shadow-default);
+
+            &.headroom--unpinned {
+                .box-shadow(none);
+            }
         }
     }
 
@@ -162,6 +178,10 @@
     &.navbar-fixed-top {
         &.affix {
             .box-shadow(@navbar-shadow-inverse);
+
+            &.headroom--unpinned {
+                .box-shadow(none);
+            }
         }
     }
 
