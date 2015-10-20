@@ -34,6 +34,7 @@
     "sonatra-jquery-datetime-picker": "latest",
     "sonatra-jquery-ripple": "latest",
     "select2-bootstrap-theme": "^0.1.0-beta.4",
+    "headroom.js": "0.7.*",
     "bootstrap-filestyle": "^1.2.0",
     "jquery": "^2.1.0"
   },
