@@ -12,6 +12,7 @@
         padding: 16px;
         height: 151px;
         background: @sidebar-default-header-bg;
+        border-bottom: 1px solid @sidebar-default-header-border;
         color: @sidebar-default-header-color;
         overflow: hidden;
 
@@ -70,6 +71,7 @@
             font-weight: @font-family-weight-bold;
             text-align: center;
             background-color: @sidebar-default-header-profile-icon-bg;
+            color: @sidebar-default-header-profile-icon-color;
             .border-top-radius(50%);
             .border-bottom-radius(50%);
         }
@@ -118,36 +120,6 @@
         border-left-width: 0;
     }
 
-    &.sidebar-default {
-        .sidebar-item {
-            &.sidebar-item-mini {
-                .sidebar-item-icon {
-                    color: @sidebar-default-link-mini-color;
-                }
-            }
-
-            > a.active {
-                border-left-width: 0;
-                color: @sidebar-default-link-hover-color;
-                background-color: @sidebar-default-link-hover-bg;
-            }
-        }
-    }
-
-    &.sidebar-inverse {
-        .sidebar-item {
-            &.sidebar-item-mini {
-                color: @sidebar-inverse-link-mini-color;
-            }
-
-            > a.active {
-                border-left-width: 0;
-                color: @sidebar-inverse-link-hover-color;
-                background-color: @sidebar-inverse-link-hover-bg;
-            }
-        }
-    }
-
     .sidebar-menu {
         &.with-icons {
             .sidebar-item > a,
@@ -174,8 +146,6 @@
             text-align: center;
             line-height: 24px;
             font-size: 0.6em;
-            color: @sidebar-default-header-color;
-            background-color: @sidebar-default-header-profile-icon-bg;
             .border-top-radius(50%);
             .border-bottom-radius(50%);
         }
@@ -197,6 +167,40 @@
 
                 .sidebar-item {
                     display: block;
+                }
+            }
+        }
+    }
+
+    &.sidebar-default {
+        .sidebar-item {
+            > a {
+                .sidebar-item-icon {
+                    &.profile-icon {
+                        color: @sidebar-default-profile-icon-color;
+                        background-color: @sidebar-default-profile-icon-bg;
+                    }
+                }
+            }
+
+            > a.active {
+                .sidebar-item-icon {
+                    color: @sidebar-default-link-active-color;
+
+                    &.profile-icon {
+                        color: @sidebar-default-profile-icon-active-color;
+                        background-color: @sidebar-default-profile-icon-active-bg;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sidebar-inverse {
+        .sidebar-item {
+            > a.active {
+                .sidebar-item-icon {
+                    color: @sidebar-inverse-link-active-color;
                 }
             }
         }
