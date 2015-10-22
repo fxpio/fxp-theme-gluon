@@ -4,18 +4,6 @@
 
 .navbar {
     height: @navbar-height;
-
-    &.headroom {
-        .transition(0.2s ease);
-    }
-
-    &.headroom--pinned {
-        .transform(translateY(0%));
-    }
-
-    &.headroom--unpinned {
-        .transform(translateY(-100%));
-    }
 }
 
 .navbar-brand {
@@ -150,10 +138,6 @@
     &.navbar-static-top {
         &.affix {
             .box-shadow(@navbar-shadow-default);
-
-            &.headroom--unpinned {
-                .box-shadow(none);
-            }
         }
     }
 
@@ -180,13 +164,9 @@
 
 .navbar-inverse {
     &.navbar-fixed-top,
-    &.navbar-fixed-top {
+    &.navbar-static-top {
         &.affix {
             .box-shadow(@navbar-shadow-inverse);
-
-            &.headroom--unpinned {
-                .box-shadow(none);
-            }
         }
     }
 
@@ -223,6 +203,27 @@
         .ripple {
             background-color: rgba(255, 255, 255, 0.3);
         }
+    }
+}
+
+// Navbar headroom
+// --------------------------------------------------
+
+.navbar {
+    height: @navbar-height;
+
+    &.headroom {
+        .transition(0.2s ease);
+    }
+
+    &.headroom--pinned {
+        .transform(translateY(0%));
+    }
+
+    &.headroom--unpinned,
+    body.table-pager-affixed & {
+        .transform(translateY(-100%));
+        .box-shadow(~"none !important");
     }
 }
 
