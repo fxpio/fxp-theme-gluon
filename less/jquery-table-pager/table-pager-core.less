@@ -30,7 +30,10 @@ caption[data-table-pager-loading-info="true"] {
 // --------------------------------------------------
 
 .table-pager {
+    .clearfix();
+
     &.affix {
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -38,15 +41,6 @@ caption[data-table-pager-loading-info="true"] {
         background-color: @table-pager-affix-bg;
         border-bottom: 1px solid @table-border-color;
         .box-shadow(@navbar-shadow-default);
-
-        + .table,
-        + .table-responsive .table {
-            margin-top: 46px;
-
-            @media (max-width: @screen-xs-max) {
-                margin-top: 46px * 2 + 1px;
-            }
-        }
     }
 }
 
