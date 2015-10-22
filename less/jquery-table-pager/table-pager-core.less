@@ -25,3 +25,53 @@ caption[data-table-pager-loading-info="true"] {
         display: inline-block;
     }
 }
+
+// Table Pager Affix
+// --------------------------------------------------
+
+.table-pager {
+    &.affix {
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: @table-pager-affix-bg;
+        border-bottom: 1px solid @table-border-color;
+        .box-shadow(@navbar-shadow-default);
+
+        + .table,
+        + .table-responsive .table {
+            margin-top: 46px;
+
+            @media (max-width: @screen-xs-max) {
+                margin-top: 46px * 2 + 1px;
+            }
+        }
+    }
+}
+
+.container-main {
+    &.container-force-open-left,
+    &.container-force-open-left.container-force-open-right {
+        .table-pager {
+            &.affix {
+                @media (min-width: @screen-md-min) {
+                    padding-left: @sidebar-width + 4px;
+                }
+            }
+        }
+    }
+
+    &.container-force-open-right,
+    &.container-force-open-right.container-force-open-left {
+        @media (min-width: @screen-md-min) {
+            .table-pager {
+                &.affix {
+                    @media (min-width: @screen-md-min) {
+                        padding-right: @sidebar-width + 4px;
+                    }
+                }
+            }
+        }
+    }
+}
