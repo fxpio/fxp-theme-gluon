@@ -30,8 +30,6 @@ caption[data-table-pager-loading-info="true"] {
 // --------------------------------------------------
 
 .table-pager {
-    .clearfix();
-
     &.affix {
         position: fixed;
         top: 0;
@@ -50,7 +48,7 @@ caption[data-table-pager-loading-info="true"] {
         .table-pager {
             &.affix {
                 @media (min-width: @screen-md-min) {
-                    padding-left: @sidebar-width + 4px;
+                    padding-left: @sidebar-width;
                 }
             }
         }
@@ -58,13 +56,46 @@ caption[data-table-pager-loading-info="true"] {
 
     &.container-force-open-right,
     &.container-force-open-right.container-force-open-left {
-        @media (min-width: @screen-md-min) {
-            .table-pager {
-                &.affix {
-                    @media (min-width: @screen-md-min) {
-                        padding-right: @sidebar-width + 4px;
-                    }
+        .table-pager {
+            &.affix {
+                @media (min-width: @screen-md-min) {
+                    padding-right: @sidebar-width;
                 }
+            }
+        }
+    }
+
+    // Bootstrap Container
+    &.container-force-open-left,
+    &.container-force-open-right {
+        .container .table-pager.affix .table-pager-container {
+            @media (min-width: @screen-md-min) {
+                margin-left: auto;
+                margin-right: auto;
+                width: @container-md - @sidebar-width;
+            }
+            @media (min-width: @screen-lg-min) {
+                width: @container-lg - @sidebar-width;
+            }
+            @media (min-width: (@screen-lg-min + @sidebar-width)) {
+                width: @container-lg;
+            }
+        }
+    }
+
+    &.container-force-open-left.container-force-open-right {
+        .container .table-pager.affix .table-pager-container {
+            @media (min-width: @screen-md-min) {
+                width: @container-md - (@sidebar-width * 2);
+            }
+            @media (min-width: @screen-lg-min) {
+                width: @container-lg - (@sidebar-width * 2);
+            }
+            @media (min-width: (@screen-lg-min + @sidebar-width)) {
+                width: @container-lg - @sidebar-width;
+            }
+            @media (min-width: (@screen-lg-min + (@sidebar-width * 2))) {
+                width: @container-lg;
             }
         }
     }
