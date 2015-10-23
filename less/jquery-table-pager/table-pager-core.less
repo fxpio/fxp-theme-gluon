@@ -18,6 +18,15 @@
     .floating-group {
         display: inline-block;
     }
+
+    + .table,
+    + .table-responsive > .table {
+        &.table-list {
+            &:not(.table-list-multiple) {
+                border-top: none;
+            }
+        }
+    }
 }
 
 caption[data-table-pager-loading-info="true"] {

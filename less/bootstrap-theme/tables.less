@@ -88,6 +88,28 @@
             position: relative;
         }
     }
+
+    &.table-list {
+        min-height: 64px;
+
+        &:not(.table-list-multiple) {
+            > thead {
+                > tr {
+                    > th {
+                        padding: 0;
+                    }
+                }
+            }
+
+            > tbody {
+                > tr:first-child {
+                    > td {
+                        border-top: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .table-responsive {
