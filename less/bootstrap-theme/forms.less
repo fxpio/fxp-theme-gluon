@@ -394,6 +394,10 @@ select {
             + span {
                 margin-left: @input-radio-checkbox-size + 8;
 
+                &:empty {
+                    margin-left: @input-radio-checkbox-size;
+                }
+
                 &:before {
                     content: "";
                     position: absolute;
