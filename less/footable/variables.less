@@ -7,11 +7,25 @@
 // --------------------------------------------------
 
 @footable-font-family:             "FontAwesome";
-@footable-toggle-icon:             "\f054";
-@footable-toggle-icon-show:        "\f078";
-@footable-toggle-color:            @brand-accent;
+@footable-font-familly-weight:     normal;
 @footable-detail-bg:               #fcfcfc;
+@footable-detail-padding-left:     @font-size-small + ceil((@font-size-small / 3));
 @footable-detail-inner-shadow:     inset 0px 4px 3px -3px rgba(0, 0, 0, 0.3);
 @footable-detail-name-color:       @brand-accent;
 @footable-sort-header-hover-color: lighten(@table-header-color, 10%);
 @footable-sort-icon-sorting-color: @brand-accent;
+
+@footable-toggle-font-size:        @font-size-small;
+@footable-toggle-icon:             "\f054";
+@footable-toggle-icon-show:        "\f078";
+@footable-toggle-color:            @brand-accent;
+@footable-toggle-padding-top:      ceil((@font-size-small / 3));
+@footable-toggle-padding-right:    5px;
+@footable-toggle-margin-left:      -(@footable-detail-padding-left);
+@footable-toggle-width:            @footable-detail-padding-left;
+
+@footable-toggle-font-size-medium: @font-size-base;
+@footable-toggle-width-medium:     @font-size-base + ceil((@font-size-base / 3));
+
+@footable-toggle-font-size-large:  @font-size-large;
+@footable-toggle-width-large:      @font-size-large + ceil((@font-size-large / 3));

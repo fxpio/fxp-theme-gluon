@@ -8,7 +8,7 @@
     &.breakpoint {
         > thead > tr {
             > th.footable-first-column {
-                padding-left: @font-size-small + ceil((@font-size-small / 3));
+                padding-left: @footable-detail-padding-left;
             }
         }
 
@@ -32,23 +32,23 @@
             }
 
             > td.footable-first-column {
-                padding-left: @font-size-small + ceil((@font-size-small / 3));
+                padding-left: @footable-detail-padding-left;
             }
 
             > td > span.footable-toggle {
                 display: inline-block;
                 font-family: @footable-font-family;
                 font-style: normal;
-                font-weight: @font-family-weight;
+                font-weight: @footable-font-familly-weight;
+                font-size: @footable-toggle-font-size;
                 line-height: 1;
                 speak: none;
-                padding-top: ceil((@font-size-small / 3));
-                padding-right: 5px;
+                padding-top: @footable-toggle-padding-top;
+                padding-right: @footable-toggle-padding-right;
                 color: @footable-toggle-color;
                 float: left;
-                margin-left: -(@font-size-small + ceil((@font-size-small / 3)));
-                font-size: @font-size-small;
-                width: @font-size-small + ceil((@font-size-small / 3));
+                margin-left: @footable-toggle-margin-left;
+                width: @footable-toggle-width;
                 .font-smoothing();
 
                 &:before {
@@ -59,15 +59,15 @@
 
         &.toggle-medium > tbody > tr {
             > td > span.footable-toggle {
-                font-size: @font-size-base;
-                width: @font-size-base + ceil((@font-size-base / 3));
+                font-size: @footable-toggle-font-size-medium;
+                width: @footable-toggle-width-medium;
             }
         }
 
         &.toggle-large > tbody > tr {
             > td > span.footable-toggle {
-                font-size: @font-size-large;
-                width: @font-size-large + ceil((@font-size-large / 3));
+                font-size: @footable-toggle-font-size-large;
+                width: @footable-toggle-width-large;
             }
         }
     }
