@@ -16,10 +16,19 @@ body,
 
     &.container-fixed-top {
         padding-top: @navbar-height + @navbar-margin-bottom;
+
+        > .navbar.navbar-static-top:first-child {
+            margin-top: -(@navbar-height + @navbar-margin-bottom);
+        }
     }
 
     &.container-fixed-bottom {
         padding-bottom: @navbar-height + @navbar-margin-bottom;
+
+        > .navbar.navbar-static-bottom:first-child,
+        > .navbar.navbar-static-bottom:last-child {
+            margin-bottom: -(@navbar-height + @navbar-margin-bottom);
+        }
     }
 }
 
