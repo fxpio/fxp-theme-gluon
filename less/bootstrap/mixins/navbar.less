@@ -1,0 +1,32 @@
+//
+// Navbar mixins
+// --------------------------------------------------
+
+.navbar-tall-variant(@name, @height, @container-padding, @affix-tall-transform) {
+    .navbar {
+        &.navbar-tall@{name} {
+            min-height: @height;
+
+            &.navbar-fixed-top {
+                &:not(.affix) + .container,
+                &:not(.affix) + .container-fluid {
+                    padding-top: @container-padding;
+                }
+            }
+        }
+    }
+
+    body:not(.table-pager-affixed) {
+        .navbar {
+            &.navbar-tall@{name} {
+                &.navbar-fixed-top {
+                    &.affix-tall {
+                        &.affix {
+                            .transform(translateY(-(@affix-tall-transform)));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
