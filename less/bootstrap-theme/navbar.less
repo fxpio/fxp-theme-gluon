@@ -460,7 +460,9 @@
         }
 
         &.navbar-sidebar-full-locked-left {
-            padding-left: @navbar-brand-width;
+            &.navbar-fixed-top {
+                padding-left: @navbar-brand-width;
+            }
 
             .navbar-brand {
                 width: auto;
