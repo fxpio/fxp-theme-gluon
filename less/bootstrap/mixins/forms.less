@@ -156,7 +156,8 @@
     .form-group,
     .floating-group {
         &.has-@{style},
-        .has-@{style} & {
+        .has-@{style} > &,
+        .has-@{style} > div > & {
             input,
             textarea {
                 border-bottom-color: @border;
@@ -206,6 +207,11 @@
                         color: @input-color-disabled;
                     }
                 }
+            }
+
+            label.top-floating-label,
+            label.top-floating-label-choice {
+                color: @color;
             }
         }
     }
