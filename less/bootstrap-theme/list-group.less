@@ -3,5 +3,31 @@
 // --------------------------------------------------
 
 .list-group-item {
-    padding: 15px 20px;
+    padding: 15px;
+
+    .btn-xs {
+        margin-top: -2px;
+    }
+
+    &.list-group-item-actions {
+        display: table;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        > .list-item-label {
+            display: table-cell;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        > .list-item-action {
+            display: table-cell;
+            width: 1px;
+
+            &:last-child {
+                padding-right: 5px;
+            }
+        }
+    }
 }
