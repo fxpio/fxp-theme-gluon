@@ -533,16 +533,16 @@
 // -------------------------
 
 @navbar-tall-height:                   @navbar-height * 2;
-@navbar-tall-container-padding:        @navbar-height;
-@navbar-affix-tall-transform:          @navbar-tall-container-padding;
+@navbar-tall-container-padding:        @navbar-height + 20;
+@navbar-affix-tall-transform:          @navbar-tall-container-padding - 20;
 
 @navbar-tall-height-medium:            @navbar-height * 3;
-@navbar-tall-container-padding-medium: @navbar-height * 2;
-@navbar-affix-tall-transform-medium:   @navbar-tall-container-padding-medium;
+@navbar-tall-container-padding-medium: @navbar-height * 2 + 20;
+@navbar-affix-tall-transform-medium:   @navbar-tall-container-padding-medium - 20;
 
 @navbar-tall-height-large:             @navbar-height * 4;
-@navbar-tall-container-padding-large:  @navbar-height * 3;
-@navbar-affix-tall-transform-large:   @navbar-tall-container-padding-large;
+@navbar-tall-container-padding-large:  @navbar-height * 3 + 20;
+@navbar-affix-tall-transform-large:   @navbar-tall-container-padding-large - 20;
 
 
 // Navs
