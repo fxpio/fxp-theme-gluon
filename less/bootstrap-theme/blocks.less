@@ -88,8 +88,10 @@
             display: inline-block;
         }
 
-        > div {
-            display: block;
+        > div,
+        &.choice-horizontal > span,
+        &.choice-horizontal > .choice-item {
+            display: table;
         }
     }
 }
