@@ -67,6 +67,33 @@
     }
 }
 
+// Choice
+// --------------------------------------------------
+
+.block-choice {
+    &.choice_multiple {
+        > span,
+        > div,
+        > .choice-item {
+            padding: 2px 8px;
+            border: 1px solid @gray-lighter;
+            margin: -3px 8px 12px 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        > span {
+            display: inline-block;
+        }
+
+        > div {
+            display: block;
+        }
+    }
+}
+
 // Collection
 // --------------------------------------------------
 
