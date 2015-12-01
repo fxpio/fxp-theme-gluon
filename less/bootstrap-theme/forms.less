@@ -68,7 +68,7 @@ textarea {
 .floating-group {
     position: relative;
 
-    input,
+    input:not([type="submit"]),
     textarea {
         ~ label:not(.btn) {
             .form-floating-label();
