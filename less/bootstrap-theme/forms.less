@@ -31,6 +31,16 @@ textarea {
     }
 }
 
+input[type="submit"] {
+    &.hidden {
+        position: absolute;
+        display: block !important;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+    }
+}
+
 textarea {
     resize: none;
 }
