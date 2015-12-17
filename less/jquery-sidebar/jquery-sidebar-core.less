@@ -181,6 +181,23 @@
                         background-color: @sidebar-default-profile-icon-bg;
                     }
                 }
+
+                &.disabled {
+                    &,
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: @sidebar-default-link-disabled-color;
+                        background-color: transparent;
+
+                        .sidebar-item-icon {
+                            &.profile-icon {
+                                color: @sidebar-default-profile-icon-color;
+                                background-color: @sidebar-default-profile-icon-bg;
+                            }
+                        }
+                    }
+                }
             }
 
             > a.active {
@@ -190,6 +207,25 @@
                     &.profile-icon {
                         color: @sidebar-default-profile-icon-active-color;
                         background-color: @sidebar-default-profile-icon-active-bg;
+                    }
+                }
+            }
+
+            > a.disabled {
+                &,
+                &:hover,
+                &:focus,
+                &:active {
+                    color: @sidebar-default-link-disabled-color;
+                    cursor: default;
+
+                    .sidebar-item-icon {
+                        color: @sidebar-default-link-disabled-color;
+
+                        &.profile-icon {
+                            color: @sidebar-default-profile-icon-disabled-color;
+                            background-color: @sidebar-default-profile-icon-disabled-bg;
+                        }
                     }
                 }
             }
