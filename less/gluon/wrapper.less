@@ -21,7 +21,7 @@
 
     h2 {
         font-size: 32px;
-        margin-bottom: 32px;
+        margin-bottom: 18px;
     }
 
     .footer-badge {
@@ -43,5 +43,22 @@
 
     .messages {
         display: inline-block;
+
+        > ul {
+            padding-left: 15px;
+        }
+
+        &.one-item {
+            > ul {
+                padding-left: 0;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .message-buttons {
+        display: block;
+        width: 100%;
+        padding-top: 14px;
     }
 }

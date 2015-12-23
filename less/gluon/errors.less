@@ -2,9 +2,21 @@
 // Errors
 // --------------------------------------------------
 
-.error-server .message-wrapper,
-.message-wrapper.error-server {
+.error-message .message-wrapper,
+.message-wrapper.error-message {
     h1 {
         color: @brand-danger;
+    }
+
+    &.error-title {
+        h2 {
+            color: @brand-danger;
+        }
+    }
+
+    &.error-text {
+        .messages {
+            color: @brand-danger;
+        }
     }
 }
