@@ -2,6 +2,15 @@
 // Button mixins
 // --------------------------------------------------
 
+.badge-variant(@style; @color; @bg) {
+    .badge {
+        &.badge-@{style} {
+            color: @color;
+            background-color: @bg;
+        }
+    }
+}
+
 .badge-btn-raised-variant(@style; @color; @bg) {
     .btn {
         &.btn-raised {
