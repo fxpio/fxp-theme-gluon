@@ -16,6 +16,10 @@
         font-weight: @font-family-weight;
     }
 
+    .control-label-required();
+}
+
+.control-label-required() {
     &.required::after, {
         content: "*";
         color: @state-danger-border;
