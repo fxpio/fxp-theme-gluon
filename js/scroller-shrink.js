@@ -29,10 +29,10 @@
 }(function ($) {
     'use strict';
 
-    // IOS SHRINK
-    // ==========
+    // SCROLLER SHRINK
+    // ===============
 
     if (/iPad|iPhone|iPod/.test(navigator.platform)) {
-        $('html').addClass('ios-shrink');
+        $('html').addClass('scroller-shrink');
     }
 }));
