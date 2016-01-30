@@ -34,5 +34,9 @@
 
     if (/iPad|iPhone|iPod/.test(navigator.platform)) {
         $('html').addClass('scroller-shrink');
+
+        $('[data-spy="affix"][data-target]').each(function (index, element) {
+            $(element).removeAttr('data-target');
+        });
     }
 }));
