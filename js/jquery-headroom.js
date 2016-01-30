@@ -48,6 +48,10 @@
             }
         }
 
+        if (undefined !== options.scroller && $('html').hasClass('scroller-shrink')) {
+            options.scroller = window;
+        }
+
         this.$element = $(element);
         this.headroom = new Headroom(this.$element.get(0), options);
         this.headroom.init();
