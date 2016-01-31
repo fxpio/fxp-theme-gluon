@@ -33,8 +33,10 @@ body,
 }
 
 html.scroller-shrink {
-    .container-main {
-        height: auto;
-        -webkit-overflow-scrolling: auto;
+    body {
+        > .container-main {
+            height: auto;
+            -webkit-overflow-scrolling: auto;
+        }
     }
 }
