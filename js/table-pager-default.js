@@ -32,7 +32,7 @@
     // ============================
 
     $.fn.tablePager.Constructor.DEFAULTS = $.extend(true, {}, $.fn.tablePager.Constructor.DEFAULTS, {
-        affixTarget:      '.container-main',
+        affixTarget:      $('html').hasClass('scroller-shrink') ? window : '.container-main',
         loadingTemplate: '<caption><div class="spinner-floating spinner-mini"><svg class="spinner spinner-accent"><circle class="spinner-path" cx="22" cy="22" r="20"></circle></svg></div></caption>'
     });
 
