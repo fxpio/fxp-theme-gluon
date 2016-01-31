@@ -29,14 +29,34 @@
 }(function ($) {
     'use strict';
 
-    // SCROLLER SHRINK
-    // ===============
+    /**
+     * Check if scroller shrink is required.
+     *
+     * @private
+     */
+    function requireShrink () {
+        return /iPad|iPhone|iPod/.test(navigator.platform);
+    }
 
-    if (/iPad|iPhone|iPod/.test(navigator.platform)) {
-        $('html').addClass('scroller-shrink');
+    /**
+     * Shrink the components.
+     */
+    window.scrollerShrinkComponents = function () {
+        if (!requireShrink()) {
+            return;
+        }
 
         $('[data-spy="affix"][data-target]').each(function (index, element) {
             $(element).removeAttr('data-target');
         });
+    };
+
+    // SCROLLER SHRINK
+    // ===============
+
+    if (requireShrink()) {
+        $('html').addClass('scroller-shrink');
     }
+
+    window.scrollerShrinkComponents();
 }));
