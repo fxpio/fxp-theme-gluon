@@ -406,3 +406,14 @@
         }
     }
 }
+
+.panel-heading-variant(@style; @bg; @color) {
+    .panel-heading {
+        &.panel-heading-@{style} {
+            margin: -1px -1px 0 -1px;
+            background-color: @bg !important;
+            color: @color !important;
+            .border-top-radius(@panel-border-radius);
+        }
+    }
+}

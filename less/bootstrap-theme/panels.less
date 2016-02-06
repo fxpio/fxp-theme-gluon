@@ -79,6 +79,32 @@
             border-bottom: none;
         }
 
+        &.panel-heading-tall {
+            min-height: 90px;
+            position: relative;
+            margin-bottom: 28px;
+            padding: 23px 25px;
+
+            .tall-fab-wrapper {
+                position: absolute;
+                right: 10%;
+                top: 100%;
+                margin-top: -27px;
+
+                &.fab-xs {
+                    margin-top: -17px;
+                }
+
+                &.fab-sm {
+                    margin-top: -23px;
+                }
+
+                &.fab-lg {
+                    margin-top: -33px;
+                }
+            }
+        }
+
         > .clearfix {
             height: 0;
         }
@@ -553,3 +579,11 @@
 .panel-variant-label(info, @brand-info);
 .panel-variant-label(warning, @brand-warning);
 .panel-variant-label(danger, @brand-danger);
+
+.panel-heading-variant(default, @gray-lighter, @text-color);
+.panel-heading-variant(primary, @brand-primary, #fff);
+.panel-heading-variant(accent, @brand-accent, #fff);
+.panel-heading-variant(success, @brand-success, #fff);
+.panel-heading-variant(info, @brand-info, #fff);
+.panel-heading-variant(warning, @brand-warning, #fff);
+.panel-heading-variant(danger, @brand-danger, #fff);
