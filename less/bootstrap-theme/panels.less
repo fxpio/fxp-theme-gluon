@@ -291,8 +291,24 @@
                 margin-top: 10px;
             }
 
+            .form-inline {
+                .input-group {
+                    .form-group {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
             .form-collection-row {
                 margin-top: 0;
+
+                .input-group {
+                    > .form-group {
+                        + .input-group-btn {
+                            padding-top: 10px;
+                        }
+                    }
+                }
             }
 
             .btn.btn-add {
@@ -398,6 +414,21 @@
                 .btn {
                     position: absolute;
                     top: 20px;
+                }
+            }
+        }
+
+        &.block-floating-label {
+            > .panel-cell-wrapper > .control-label,
+            > .panel-cell-wrapper > .block-control,
+            > .control-label,
+            > .block-control {
+                padding-top: 30px;
+            }
+
+            .form-collection-row {
+                + .form-collection-row {
+                    margin-top: 20px;
                 }
             }
         }
