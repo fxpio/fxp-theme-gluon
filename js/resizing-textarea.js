@@ -27,40 +27,8 @@
 }(function ($) {
     'use strict';
 
-    /**
-     * Resize the text area.
-     *
-     * @param {jQuery} $target
-     *
-     * @private
-     */
-    function resize($target) {
-        var minRow = $target.attr('data-resizing-rows') || 2,
-            scrollHeight,
-            lineHeight;
-
-        $target.attr('rows', minRow);
-        $target.scrollTop(0);
-
-        scrollHeight = $target.get(0).scrollHeight;
-        lineHeight = parseInt($target.css('line-height'), 10);
-
-        $target.attr('rows', Math.max(minRow, Math.floor(scrollHeight / lineHeight)));
-    }
-
-    /**
-     * On resize event.
-     *
-     * @param {jQuery.Event|Event} event
-     *
-     * @private
-     */
-    function onResize(event) {
-        resize($(event.currentTarget));
-    }
-
-    // RIPPLE CLASS DEFINITION
-    // =======================
+    // RESIZING TEXTAREA CLASS DEFINITION
+    // ==================================
 
     /**
      * @constructor
@@ -79,21 +47,10 @@
             this.options.resizingTextareaSelector = null;
         }
 
-        this.$element.on('change.st.resizing-textarea, keydown.st.resizing-textarea, keyup.st.resizing-textarea' + this.guid, this.options.resizingTextareaSelector, this, onResize);
-
         var $targets = null !== this.options.resizingTextareaSelector ? $(this.options.resizingTextareaSelector, this.$element)
             : this.$element;
 
-        $targets.each(function (index) {
-            var $target = $targets.eq(index);
-            $target.css('overflow', 'hidden');
-
-            if (undefined === $target.attr('data-resizing-rows')) {
-                $target.attr('data-resizing-rows', $target.attr('rows') || 2);
-            }
-
-            resize($target);
-        });
+        autosize($targets);
     },
         old;
 
@@ -115,20 +72,14 @@
         var $targets = null !== this.options.resizingTextareaSelector ? $(this.options.resizingTextareaSelector, this.$element)
             : this.$element;
 
-        this.$element.off('change.st.resizing-textarea, keydown.st.resizing-textarea, keyup.st.resizing-textarea' + this.guid, this.options.resizingTextareaSelector, onResize);
-
-        $targets.each(function (index) {
-            var $target = $targets.eq(index);
-
-            $target.removeAttr('data-resizing-rows');
-        });
+        autosize.destroy($targets);
 
         this.$element.removeData('st.resizing-textarea');
     };
 
 
-    // RIPPLE PLUGIN DEFINITION
-    // ========================
+    // RESIZING TEXTAREA PLUGIN DEFINITION
+    // ===================================
 
     function Plugin(option, value) {
         return this.each(function () {
@@ -157,8 +108,8 @@
     $.fn.resizingTextarea.Constructor = ResizingTextarea;
 
 
-    // RIPPLE NO CONFLICT
-    // ==================
+    // RESIZING TEXTAREA NO CONFLICT
+    // =============================
 
     $.fn.resizingTextarea.noConflict = function () {
         $.fn.resizingTextarea = old;
@@ -167,8 +118,8 @@
     };
 
 
-    // RIPPLE DATA-API
-    // ===============
+    // RESIZING TEXTAREA DATA-API
+    // ==========================
 
     $(window).on('load', function () {
         $('[data-resizing-textarea]').each(function () {
