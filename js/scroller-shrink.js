@@ -40,13 +40,15 @@
 
     /**
      * Shrink the components.
+     *
+     * @param {jQuery|undefined} $container the container wrapper
      */
-    window.scrollerShrinkComponents = function () {
+    window.scrollerShrinkComponents = function ($container) {
         if (!requireShrink()) {
             return;
         }
 
-        $('[data-spy="affix"][data-target]').each(function (index, element) {
+        $('[data-spy="affix"][data-target]', $container).each(function (index, element) {
             $(element).removeAttr('data-target');
         });
     };
