@@ -66,4 +66,30 @@
         font-size: floor(@font-size-base * 0.9);
         color: lighten(@gray-light, 20%);
     }
+
+    .buttons {
+        div {
+            &[class*="col-"] {
+                padding: 0;
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+
+        .btn {
+            margin-bottom: 22px;
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .account-wrapper {
+        .buttons {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
 }
