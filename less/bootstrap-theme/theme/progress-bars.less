@@ -1,0 +1,24 @@
+//
+// Progress bars Theme
+// --------------------------------------------------
+
+.progress {
+    &.progress-floating-label {
+        .progress-bar span {
+            background-color: @tooltip-bg;
+            color: @tooltip-color;
+            opacity: @tooltip-opacity;
+
+            &:after {
+                border-top-color: @tooltip-arrow-color;
+            }
+        }
+    }
+}
+
+// Variations
+// -------------------------
+
+.progress-bar-accent {
+    .progress-bar-variant(@progress-bar-accent-bg);
+}

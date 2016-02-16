@@ -28,7 +28,6 @@
             height: @bar-size;
             vertical-align: middle;
             margin: 0 @input-toggle-size 0 0;
-            background-color: @input-toggle-unchecked-lever-bg;
             .border-top-radius(@bar-size);
             .border-bottom-radius(@bar-size);
             .transition(background 0.3s ease);
@@ -43,7 +42,6 @@
                 height: @input-toggle-size;
                 cursor: pointer;
                 z-index: 1;
-                background-color: @input-toggle-unchecked-toggle-bg;
                 .border-top-radius(50%);
                 .border-bottom-radius(50%);
                 .box-shadow(@input-toggle-shadow);
@@ -63,22 +61,6 @@
                 .transform-origin(50% 50%);
                 .transition(@input-toggle-transition);
             }
-
-            &:hover {
-                &:before {
-                    background-color: @input-toggle-unchecked-toggle-bg-hover;
-                }
-            }
-        }
-
-        &:focus,
-        &:active {
-            + .form-control-md-style {
-                &:after {
-                    background-color: @input-toggle-unchecked-toggle-bg-focus;
-                    .box-shadow(0 0 0 @input-toggle-focus-size @input-toggle-unchecked-toggle-bg-focus);
-                }
-            }
         }
     }
 
@@ -96,43 +78,14 @@
     input[type="checkbox"][disabled],
     fieldset[disabled] & input[type="checkbox"] {
         + .form-control-md-style {
-            &:hover {
-                &:before {
-                    background-color: @input-toggle-unchecked-toggle-bg-disabled;
-                }
-            }
-        }
-    }
-
-    // disabled unchecked
-    input[type="checkbox"][disabled],
-    fieldset[disabled] & input[type="checkbox"] {
-        + .form-control-md-style {
-            background-color: @input-toggle-unchecked-lever-bg-disabled;
-
             &,
             &:before {
                 cursor: not-allowed;
             }
 
-            &:before {
-                background-color: @input-toggle-unchecked-toggle-bg-disabled;
-            }
-
             + span {
                 cursor: not-allowed;
-                color: @input-toggle-color-placeholder-disabled;
             }
         }
     }
 }
-
-// Toggle colors
-.toggle-variant(input-toggle; ~'');
-.toggle-variant(input-toggle-default; ~'.input-default');
-.toggle-variant(input-toggle-primary; ~'.input-primary');
-.toggle-variant(input-toggle-accent; ~'.input-accent');
-.toggle-variant(input-toggle-success; ~'.input-success');
-.toggle-variant(input-toggle-info; ~'.input-info');
-.toggle-variant(input-toggle-warning; ~'.input-warning');
-.toggle-variant(input-toggle-danger; ~'.input-danger');

@@ -73,7 +73,6 @@
         padding: 20px 0;
 
         border: none;
-        background-color: transparent;
         min-width: 1px;
         .box-shadow(none);
 
@@ -92,14 +91,6 @@
                 line-height: 57px;
                 padding: 0 @fab-label-margin;
                 font-weight: @fab-label-font-weight;
-                color: @fab-label-color;
-            }
-
-            .disabled,
-            button[disabled] {
-                + .fab-label {
-                    color: @fab-label-disabled-color;
-                }
             }
         }
 
@@ -119,7 +110,6 @@
     &.wrapper-dropdown-fab.wrapper-mask-content {
         opacity: 0;
         z-index: (@zindex-navbar - 1) !important;
-        background-color: @fab-mask-background-bg;
         .transition(opacity @transition);
 
         &.wrapper-open {
@@ -254,14 +244,6 @@
         }
     }
 }
-
-.fab-variant(default; @btn-default-raised-color; @btn-default-raised-bg; @btn-default-raised-bg-active; @btn-default-raised-color-disabled; @btn-default-raised-bg-disabled; @btn-default-raised-shadow; @btn-default-raised-shadow-active);
-.fab-variant(primary; @btn-primary-raised-color; @btn-primary-raised-bg; @btn-primary-raised-bg-active; @btn-primary-raised-color-disabled; @btn-primary-raised-bg-disabled; @btn-primary-raised-shadow; @btn-primary-raised-shadow-active);
-.fab-variant(accent; @btn-accent-raised-color; @btn-accent-raised-bg; @btn-accent-raised-bg-active; @btn-accent-raised-color-disabled; @btn-accent-raised-bg-disabled; @btn-accent-raised-shadow; @btn-accent-raised-shadow-active);
-.fab-variant(success; @btn-success-raised-color; @btn-success-raised-bg; @btn-success-raised-bg-active; @btn-success-raised-color-disabled; @btn-success-raised-bg-disabled; @btn-success-raised-shadow; @btn-success-raised-shadow-active);
-.fab-variant(info; @btn-info-raised-color; @btn-info-raised-bg; @btn-info-raised-bg-active; @btn-info-raised-color-disabled; @btn-info-raised-bg-disabled; @btn-info-raised-shadow; @btn-info-raised-shadow-active);
-.fab-variant(warning; @btn-warning-raised-color; @btn-warning-raised-bg; @btn-warning-raised-bg-active; @btn-warning-raised-color-disabled; @btn-warning-raised-bg-disabled; @btn-warning-raised-shadow; @btn-warning-raised-shadow-active);
-.fab-variant(danger; @btn-danger-raised-color; @btn-danger-raised-bg; @btn-danger-raised-bg-active; @btn-danger-raised-color-disabled; @btn-danger-raised-bg-disabled; @btn-danger-raised-shadow; @btn-danger-raised-shadow-active);
 
 @media (max-width: @screen-xs-max) {
     .btn-group-fab-bottom-right {

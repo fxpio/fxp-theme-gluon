@@ -25,7 +25,7 @@ textarea {
         display: block;
         width: 100%;
         border: none;
-        border-bottom: 1px solid @input-border;
+        border-bottom: 1px solid transparent;
         outline: none;
         .box-shadow(none);
     }
@@ -100,7 +100,6 @@ textarea {
         &.has-floating-content,
         &.fixed-floating-label {
             ~ label:not(.btn) {
-                color: @form-floating-label-color-focus;
                 .form-floating-label-top();
 
                 &.control-label.required::after {
@@ -110,8 +109,6 @@ textarea {
         }
 
         &:focus {
-            border-bottom-color: @input-border-focus;
-
             ~ .floating-bar:before,
             ~ .floating-bar:after {
                 width: 50%;
@@ -148,7 +145,6 @@ textarea {
             width: 0;
             bottom: 0;
             position: absolute;
-            background: @input-border-focus;
         }
 
         &:before {
@@ -202,29 +198,9 @@ textarea {
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-        border-color: @input-border-disabled;
         border-bottom-style: dashed;
-        color: @input-color-disabled;
-        .placeholder(@input-color-placeholder-disabled);
-
-        ~ label:not(.btn) {
-            color: @input-color-placeholder-disabled;
-        }
-
-        &.has-floating-content,
-        &.fixed-floating-label {
-            ~ label:not(.btn) {
-                color: @input-color-placeholder-disabled;
-            }
-        }
     }
 }
-
-.form-control-state(success; @state-success-text; @state-success-bg; @state-success-border);
-.form-control-state(info; @state-info-text; @state-info-bg; @state-info-border);
-.form-control-state(warning; @state-warning-text; @state-warning-bg; @state-warning-border);
-.form-control-state(danger; @state-danger-text; @state-danger-bg; @state-danger-border);
-.form-control-state(error; @state-danger-text; @state-danger-bg; @state-danger-border);
 
 // Input file
 // --------------------------------------------------
@@ -233,10 +209,6 @@ textarea {
     + .btn-file-input-text {
         float: right;
         margin-top: -@input-height-base;
-    }
-
-    + .bootstrap-filestyle {
-        outline-color: @input-border-focus;
     }
 }
 
@@ -261,7 +233,7 @@ select {
     &.form-control {
         font-weight: @font-family-weight;
         border: none;
-        border-bottom: 1px solid @input-border;
+        border-bottom: 1px solid transparent;
         outline: none;
         .box-shadow(none);
 
@@ -272,14 +244,8 @@ select {
             cursor: pointer;
         }
 
-        &:hover {
-            background-color: @dropdown-bg-hover;
-        }
-
         &:focus,
         &:active {
-            background-color: @dropdown-bg !important;
-            border-bottom-color: transparent;
             .box-shadow(@dropdown-shadow);
         }
 
@@ -303,28 +269,12 @@ select {
         &[disabled],
         &[readonly],
         fieldset[disabled] & {
-            border-color: @input-border-disabled;
-            color: @input-color-disabled;
             cursor: not-allowed;
             opacity: 0.65;
-            .placeholder(@input-color-placeholder-disabled);
 
             &:focus,
             &:active {
-                background-color: @dropdown-bg !important;
-                border-bottom-color: @input-border-disabled;
                 .box-shadow(none);
-            }
-
-            ~ label:not(.btn) {
-                color: @input-color-placeholder-disabled;
-            }
-
-            &.has-floating-content,
-            &.fixed-floating-label {
-                ~ label:not(.btn) {
-                    color: @input-color-placeholder-disabled;
-                }
             }
         }
     }
@@ -348,7 +298,6 @@ select {
                 &:focus,
                 &:active {
                     .box-shadow(none);
-                    border-bottom-color: @input-border-disabled;
                 }
             }
         }
@@ -390,7 +339,7 @@ select {
                 top: 0;
                 left: 0;
                 background-color: @input-unchecked-bg;
-                border: 2px solid @input-border;
+                border: 2px solid transparent;
                 vertical-align: top;
                 .transition(@input-radio-checkbox-transition);
             }
@@ -401,12 +350,6 @@ select {
                 top: @input-radio-checkbox-size / 2 - 1;
                 left: @input-radio-checkbox-size / 2 - 1;
                 .transition(@input-radio-checkbox-transition);
-            }
-
-            &:hover {
-                &:before {
-                    border-color: @input-unchecked-border-hover;
-                }
             }
 
             + span {
@@ -428,18 +371,6 @@ select {
                     .border-bottom-radius(50%);
                     .transform-origin(50% 50%);
                     .transition(box-shadow @input-radio-checkbox-transition);
-                }
-            }
-        }
-
-        &:focus,
-        &:active {
-            + .form-control-md-style {
-                + span {
-                    &:before {
-                        background-color: @input-unchecked-bg-focus;
-                        .box-shadow(0 0 0 @input-radio-checkbox-focus-size @input-unchecked-bg-focus);
-                    }
                 }
             }
         }
@@ -518,10 +449,6 @@ select {
                 cursor: not-allowed;
             }
 
-            &:before {
-                background-color: @input-unchecked-bg-disabled;
-            }
-
             + span {
                 cursor: not-allowed;
             }
@@ -539,16 +466,6 @@ select {
         }
     }
 }
-
-// Checkbox/radio colors
-.form-control-color(input; ~'');
-.form-control-color(input-default; ~'.input-default');
-.form-control-color(input-primary; ~'.input-primary');
-.form-control-color(input-accent; ~'.input-accent');
-.form-control-color(input-success; ~'.input-success');
-.form-control-color(input-info; ~'.input-info');
-.form-control-color(input-warning; ~'.input-warning');
-.form-control-color(input-danger; ~'.input-danger');
 
 // Bootstrap checkbox/radio wrapper
 .radio,

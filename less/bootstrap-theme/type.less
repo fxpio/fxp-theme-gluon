@@ -5,18 +5,3 @@
 dt {
   font-weight: @font-family-weight-bold;
 }
-
-// Contextual colors
-.text-accent {
-  .text-emphasis-variant(@brand-accent);
-}
-
-// Contextual backgrounds
-// For now we'll leave these alongside the text classes until v4 when we can
-// safely shift things around (per SemVer rules).
-.bg-accent {
-  // Given the contrast here, this is the only class to have its color inverted
-  // automatically.
-  color: #fff;
-  .bg-variant(@brand-accent);
-}

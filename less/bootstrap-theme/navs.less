@@ -3,29 +3,8 @@
 // --------------------------------------------------
 
 .nav {
-    .open > a {
-        &,
-        &:hover,
-        &:focus {
-            color: @dropdown-link-hover-color;
-            background-color: @dropdown-link-hover-bg;
-        }
-    }
-
-    > li {
-        > a {
-            color: @nav-link-color;
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: @nav-link-hover-color;
-            }
-        }
-    }
-
     &.nav-tabs {
-        border-bottom: 1px solid @nav-tabs-border-color;
+        border-bottom: 1px solid transparent;
 
         > li {
             > a {
@@ -44,9 +23,6 @@
 
             &.active {
                 > a {
-                    color: @nav-tabs-active-link-color;
-                    background-color: @nav-tabs-active-link-hover-bg;
-
                     &:after {
                         content: " ";
                         position: absolute;
@@ -55,31 +31,16 @@
                         left: 0;
                         height: 2px;
                         width: 100%;
-                        background-color: @nav-tabs-active-link-border-color;
                         .animation(nav-border-expand .2s cubic-bezier(.4,0,.4,1));
                         .transition(all 1s cubic-bezier(.4,0,1,1));
                     }
                 }
-            }
-
-            .ripple {
-                background-color: @nav-tabs-active-link-ripple-bg;
             }
         }
     }
 
     &.nav-pills {
         margin-bottom: 10px;
-
-        > li {
-            &.active {
-                > a {
-                    .ripple {
-                        background-color: @nav-pills-active-link-ripple-bg;
-                    }
-                }
-            }
-        }
     }
 }
 

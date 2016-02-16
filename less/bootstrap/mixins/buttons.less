@@ -2,7 +2,8 @@
 // Button mixins
 // --------------------------------------------------
 
-.button-variant-flat(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg) {
+
+.button-variant-flat() {
     text-transform: uppercase;
     padding: @btn-padding-vertical @btn-padding-horizontal;
     min-width: 77px;
@@ -33,8 +34,6 @@
             margin-right: 3px;
         }
     }
-
-    .button-variant-flat-color(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg);
 }
 
 .button-variant-flat-color(@bg-hover; @bg-active; @color-disabled; @bg-disabled; @ripple-bg) {
@@ -74,7 +73,7 @@
     }
 }
 
-.button-variant-raised(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active) {
+.button-variant-raised-color(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active) {
     &.btn-raised {
         .button-variant-raised-content(@color; @bg; @bg-active; @color-disabled; @bg-disabled; @shadow; @shadow-active);
     }

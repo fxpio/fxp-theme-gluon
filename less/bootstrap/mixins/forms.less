@@ -136,7 +136,6 @@
 // Form control color (floating label)
 
 .form-floating-label(@color: @form-floating-label-color) {
-    color: @color;
     position: absolute;
     pointer-events: none;
     font-weight: normal;
@@ -144,6 +143,11 @@
     top: (@font-size-base / 2) + 1;
     .transition(@transition);
     .transform-origin(top left);
+    .form-floating-label-color(@color);
+}
+
+.form-floating-label-color(@color: @form-floating-label-color) {
+    color: @color;
 }
 
 .form-floating-label-top(@paddingVerticalSup: 0) {

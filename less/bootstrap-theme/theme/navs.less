@@ -1,0 +1,59 @@
+//
+// Navs
+// --------------------------------------------------
+
+.nav {
+    .open > a {
+        &,
+        &:hover,
+        &:focus {
+            color: @dropdown-link-hover-color;
+            background-color: @dropdown-link-hover-bg;
+        }
+    }
+
+    > li {
+        > a {
+            color: @nav-link-color;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: @nav-link-hover-color;
+            }
+        }
+    }
+
+    &.nav-tabs {
+        border-bottom-color: @nav-tabs-border-color;
+
+        > li {
+            &.active {
+                > a {
+                    color: @nav-tabs-active-link-color;
+                    background-color: @nav-tabs-active-link-hover-bg;
+
+                    &:after {
+                        background-color: @nav-tabs-active-link-border-color;
+                    }
+                }
+            }
+
+            .ripple {
+                background-color: @nav-tabs-active-link-ripple-bg;
+            }
+        }
+    }
+
+    &.nav-pills {
+        > li {
+            &.active {
+                > a {
+                    .ripple {
+                        background-color: @nav-pills-active-link-ripple-bg;
+                    }
+                }
+            }
+        }
+    }
+}

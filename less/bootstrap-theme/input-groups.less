@@ -111,24 +111,13 @@ div[class*="col-"] {
     &.bootstrap-filestyle {
         input,
         textarea {
-            border-bottom: 1px solid @input-border;
+            border-bottom: 1px solid transparent;
         }
     }
 
     .input-group {
         &.bootstrap-filestyle {
             width: 100%;
-        }
-    }
-}
-
-.has-error {
-    > .input-group {
-        &.bootstrap-filestyle {
-            input,
-            textarea {
-                border-bottom-color: @state-danger-border;
-            }
         }
     }
 }

@@ -1,0 +1,24 @@
+//
+// Table Theme
+// --------------------------------------------------
+
+.table {
+    > thead,
+    > tfoot {
+        > tr {
+            > th {
+                color: @table-header-color;
+            }
+        }
+    }
+
+    > tbody {
+        > tr {
+            > td {
+                &.table-row-number {
+                    color: @table-row-number-color;
+                }
+            }
+        }
+    }
+}

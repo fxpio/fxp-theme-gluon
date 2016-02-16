@@ -1,0 +1,74 @@
+//
+// Blocks Theme
+// --------------------------------------------------
+
+// Control
+// --------------------------------------------------
+
+.block-control {
+    color: @input-color;
+    .placeholder();
+
+    &.choice_multiple {
+        span {
+            color: @input-color;
+        }
+    }
+}
+
+// Choice
+// --------------------------------------------------
+
+.block-choice {
+    &.choice_multiple {
+        > span,
+        > div,
+        > .choice-item {
+            border-color: @gray-lighter;
+        }
+    }
+}
+
+// Collection
+// --------------------------------------------------
+
+.block-collection {
+    &.choice-items {
+        > span,
+        > div,
+        > a,
+        > .choice-item {
+            border-color: @gray-lighter;
+        }
+    }
+}
+
+// Checkbox / Radio
+// --------------------------------------------------
+
+.block-control-fa-checkbox,
+.block-control-fa-radio {
+    color: @brand-primary;
+    background-color: @input-bg;
+    border-color: @input-border;
+}
+
+.block-control-color(default);
+.block-control-color(primary);
+.block-control-color(accent);
+.block-control-color(success);
+.block-control-color(info);
+.block-control-color(warning);
+.block-control-color(danger);
+
+// Floating Label
+// --------------------------------------------------
+
+.floating-group {
+    .block-label {
+        &.top-floating-label,
+        &.top-floating-label-choice {
+            .form-floating-label-color(@block-floating-label-color);
+        }
+    }
+}

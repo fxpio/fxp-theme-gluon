@@ -22,7 +22,7 @@ select {
         position: relative;
         font-weight: @font-family-weight;
         border: none;
-        border-bottom: 1px solid @input-border;
+        border-bottom: 1px solid transparent;
         outline: none;
         height: auto;
         min-height: @input-height-base;
@@ -44,17 +44,14 @@ select {
             padding: 0;
             display: inline-block;
             vertical-align: bottom;
-            background-color: @input-bg;
             background-image: none;
         }
 
         .select2-selection__rendered {
             font-size: @font-size-base;
-            color: @input-color;
 
             .select2-search__field {
                 font-weight: @font-family-weight;
-                .placeholder();
             }
         }
 
@@ -68,7 +65,6 @@ select {
             height: @input-height-base;
 
             b {
-                border-color: @input-color transparent transparent transparent;
                 .transition(all @dropdown-transition);
             }
         }
@@ -82,7 +78,6 @@ select {
         .select2-selection__choice {
             background-color: transparent;
             padding: 2px 8px;
-            border-color: lighten(@input-border, 10%);
             .border-top-radius(0);
             .border-bottom-radius(0);
         }
@@ -96,16 +91,14 @@ select {
     &.select2-container--open {
         .select2-selection {
             border: none;
-            border-bottom: 1px solid @input-border;
+            border-bottom: 1px solid transparent;
 
             &.select2-selection--single {
-                background-color: @dropdown-bg !important;
                 border-bottom-color: transparent;
                 .box-shadow(@dropdown-shadow);
             }
 
             &.select2-selection--multiple {
-                border-color: @input-border-focus;
                 min-height: @input-height-base;
             }
         }
@@ -115,7 +108,6 @@ select {
         .select2-selection--single {
             .select2-selection__arrow {
                 b {
-                    border-color: @input-color transparent transparent transparent;
                     border-width: 5px 4px 0 4px;
                     .rotate(180deg);
                 }
@@ -137,12 +129,11 @@ select {
 
         .select2-search__field {
             border: none;
-            border-bottom: 1px solid @input-border;
+            border-bottom: 1px solid transparent;
             padding: @padding-base-vertical 0;
 
             &:focus {
                 outline: none;
-                border-color: @input-border-focus;
                 border-bottom-width: 2px;
                 padding-bottom: @padding-base-vertical - 1;
             }
@@ -157,28 +148,17 @@ select {
         padding: 0 16px;
         display: block;
         line-height: 48px;
-        color: @dropdown-link-color;
 
         &.select2-results__option--highlighted {
             text-decoration: none;
-            color: @dropdown-link-hover-color;
-            background-color: @dropdown-link-hover-bg;
         }
     }
 
     &.select2-container--disabled {
         .select2-selection {
-            background-color: @input-bg-disabled;
-            border-color: @input-border-disabled;
             border-bottom-width: 1px;
-            color: @input-color-disabled;
             cursor: not-allowed;
             opacity: 0.65;
-
-            .select2-selection__rendered,
-            .select2-selection__placeholder {
-                color: @input-color-disabled;
-            }
 
             .select2-search__field {
                 cursor: not-allowed;
@@ -188,12 +168,11 @@ select {
         &.select2-container--focus {
             .select2-selection {
                 border: none;
-                border-bottom: 1px solid @input-border;
+                border-bottom: 1px solid transparent;
 
                 &.select2-selection--single {
                     border: none;
-                    border-bottom: 1px solid @input-border;
-                    background-color: @input-bg-disabled !important;
+                    border-bottom: 1px solid transparent;
                     .box-shadow(none);
 
                     .ripple {
@@ -206,19 +185,6 @@ select {
 }
 
 .has-error {
-    > .select2-container--default {
-        .select2-selection {
-            border-bottom-color: @state-danger-border;
-        }
-
-        &.select2-container--focus,
-        &.select2-container--open {
-            .select2-selection.select2-selection--multiple {
-                border-bottom-color: @state-danger-border;
-            }
-        }
-    }
-
     > .select2-container--focus,
     > .select2-container--open {
         .select2-selection {

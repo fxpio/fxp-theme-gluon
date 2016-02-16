@@ -11,9 +11,7 @@
         position: relative;
         padding: 16px;
         height: 151px;
-        background: @sidebar-default-header-bg;
-        border-bottom: 1px solid @sidebar-default-header-border;
-        color: @sidebar-default-header-color;
+        border-bottom: 1px solid transparent;
         overflow: hidden;
 
         .sidebar-header-title,
@@ -70,8 +68,6 @@
             font-size: 20px;
             font-weight: @font-family-weight-bold;
             text-align: center;
-            background-color: @sidebar-default-header-profile-icon-bg;
-            color: @sidebar-default-header-profile-icon-color;
             .border-top-radius(50%);
             .border-bottom-radius(50%);
         }
@@ -85,7 +81,6 @@
         height: 24px;
         margin-top: -3px;
         text-align: center;
-        color: @sidebar-default-icon-color;
 
         &.fa {
             line-height: 24px;
@@ -167,76 +162,6 @@
 
                 .sidebar-item {
                     display: block;
-                }
-            }
-        }
-    }
-
-    &.sidebar-default {
-        .sidebar-item {
-            > a {
-                .sidebar-item-icon {
-                    &.profile-icon {
-                        color: @sidebar-default-profile-icon-color;
-                        background-color: @sidebar-default-profile-icon-bg;
-                    }
-                }
-
-                &.disabled {
-                    &,
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        color: @sidebar-default-link-disabled-color;
-                        background-color: transparent;
-
-                        .sidebar-item-icon {
-                            &.profile-icon {
-                                color: @sidebar-default-profile-icon-color;
-                                background-color: @sidebar-default-profile-icon-bg;
-                            }
-                        }
-                    }
-                }
-            }
-
-            > a.active {
-                .sidebar-item-icon {
-                    color: @sidebar-default-link-active-color;
-
-                    &.profile-icon {
-                        color: @sidebar-default-profile-icon-active-color;
-                        background-color: @sidebar-default-profile-icon-active-bg;
-                    }
-                }
-            }
-
-            > a.disabled {
-                &,
-                &:hover,
-                &:focus,
-                &:active {
-                    color: @sidebar-default-link-disabled-color;
-                    cursor: default;
-
-                    .sidebar-item-icon {
-                        color: @sidebar-default-link-disabled-color;
-
-                        &.profile-icon {
-                            color: @sidebar-default-profile-icon-disabled-color;
-                            background-color: @sidebar-default-profile-icon-disabled-bg;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.sidebar-inverse {
-        .sidebar-item {
-            > a.active {
-                .sidebar-item-icon {
-                    color: @sidebar-inverse-link-active-color;
                 }
             }
         }

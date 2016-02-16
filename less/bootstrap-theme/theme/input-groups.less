@@ -1,0 +1,26 @@
+//
+// Input groups Theme
+// --------------------------------------------------
+
+// Input file
+// -------------------------
+
+.input-group {
+    &.bootstrap-filestyle {
+        input,
+        textarea {
+            border-bottom-color: @input-border;
+        }
+    }
+}
+
+.has-error {
+    > .input-group {
+        &.bootstrap-filestyle {
+            input,
+            textarea {
+                border-bottom-color: @state-danger-border;
+            }
+        }
+    }
+}

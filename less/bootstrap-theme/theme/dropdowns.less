@@ -1,0 +1,114 @@
+//
+// Dropdowns Theme
+// --------------------------------------------------
+
+.dropdown-md {
+    .btn {
+        &:hover,
+        &:focus {
+            background-color: @dropdown-bg-hover;
+        }
+
+        &.btn-ripple {
+            .ripple {
+                background-color: @btn-default-ripple-bg;
+            }
+        }
+    }
+
+    .btn:focus,
+    .btn:active,
+    &.open .dropdown-toggle {
+        background-color: @dropdown-bg !important;
+        border-bottom-color: transparent;
+    }
+
+    &.open {
+        .dropdown-toggle {
+            &.btn-ripple {
+                background-color: @dropdown-bg !important;
+            }
+        }
+    }
+
+    .dropdown-md-variant(default, @dropdown-default-btn-border);
+    .dropdown-md-variant(primary, @dropdown-primary-btn-border);
+    .dropdown-md-variant(accent, @dropdown-accent-btn-border);
+    .dropdown-md-variant(success, @dropdown-success-btn-border);
+    .dropdown-md-variant(info, @dropdown-info-btn-border);
+    .dropdown-md-variant(warning, @dropdown-warning-btn-border);
+    .dropdown-md-variant(danger, @dropdown-danger-btn-border);
+
+    .btn:disabled,
+    .btn.disabled {
+        border-bottom-color: @dropdown-default-btn-border;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    .btn + .dropdown-toggle:disabled,
+    .btn + .dropdown-toggle.disabled {
+        &,
+        &:hover,
+        &:focus {
+            border-left-color: fade(@dropdown-default-btn-border, 23%);
+        }
+    }
+}
+
+.dropdown-menu {
+    > li.dropdown {
+        > a:after {
+            border-left-color: @dropdown-link-color;
+        }
+
+        > a:hover:after,
+        > a:focus:after {
+            border-left-color: @dropdown-link-hover-color;
+        }
+    }
+
+    > li.open {
+        > a:after {
+            border-left-color: @dropdown-link-hover-color;
+        }
+    }
+
+    .dropdown {
+        &.open {
+            > a:after {
+                border-left-color: inherit;
+            }
+        }
+    }
+}
+
+.dropdown-header {
+    color: @dropdown-header-color;
+}
+
+// Menu 2 col
+// --------------------------------------------------
+
+.col-menu-2 {
+    > li:first-child ul {
+        border-right-color: @gray-lighter;
+    }
+
+    > li > ul {
+        > li {
+            a {
+                color: @dropdown-link-color;
+            }
+
+            a:hover,
+            a:focus {
+                color: @dropdown-link-hover-color;
+                background-color: @dropdown-link-hover-bg;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+//
+// Footable Theme
+// --------------------------------------------------
+
+.footable {
+    &.breakpoint {
+        > tbody > tr {
+            > td.footable-row-detail-cell {
+                background-color: @footable-detail-bg;
+            }
+
+            > td > span.footable-toggle {
+                color: @footable-toggle-color;
+            }
+        }
+    }
+}
+
+.footable-row-detail-name {
+    color: @footable-detail-name-color;
+
+    // sort
+    > i.table-sort-icon {
+        color: @table-sort-icon-color;
+    }
+
+    // sortable
+    &[data-table-pager-sortable=true] {
+        &:hover {
+            color: @footable-sort-header-hover-color;
+        }
+
+        &[data-table-sort=asc] {
+            > i.table-sort-icon {
+                color: @footable-sort-icon-sorting-color;
+            }
+        }
+
+        &[data-table-sort=desc] {
+            > i.table-sort-icon {
+                color: @footable-sort-icon-sorting-color;
+            }
+        }
+    }
+}

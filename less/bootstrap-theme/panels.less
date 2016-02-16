@@ -34,8 +34,6 @@
 
     > .panel-heading,
     > .panel-footer {
-        border-color: @panel-inner-border;
-
         > .panel-actions {
             padding: 10px 0;
             line-height: ceil((@font-size-base * 1.125));
@@ -43,7 +41,6 @@
 
         > .panel-buttons {
             margin: 10px -16px;
-            background-color: darken(@panel-bg, 1%);
 
             > .nav-scrollable {
                 > .nav-btn-group {
@@ -115,8 +112,8 @@
         }
 
         > .panel-buttons {
-            border-top: 1px solid @panel-inner-border;
-            border-bottom: 1px solid @panel-inner-border;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
 
             &:first-child {
                 border-top: none;
@@ -137,8 +134,8 @@
 
     > .panel-footer {
         > .panel-buttons {
-            border-top: 1px solid @panel-inner-border;
-            border-bottom: 1px solid @panel-inner-border;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
 
             &:first-child {
                 border-top: none;
@@ -168,10 +165,6 @@
                 line-height: ceil((@panel-section-heading-size * 1.125));
             }
 
-            > .panel-section-title {
-                color: @panel-section-heading-color;
-            }
-
             + .panel-body {
                 padding-top: 0;
                 padding-left: 0;
@@ -183,7 +176,7 @@
             margin-top: 15px;
 
             > .panel-section-heading {
-                border-top: 1px solid @panel-section-border;
+                border-top: 1px solid transparent;
             }
         }
 
@@ -220,7 +213,7 @@
         margin-bottom: 15px;
 
         + .panel-row {
-            border-top: 1px solid @panel-inner-row-border;
+            border-top: 1px solid transparent;
         }
 
         &.panel-row-spacer {
@@ -461,29 +454,6 @@
     }
 }
 
-// Contextual variations
-.panel-accent {
-    .panel-variant(@panel-accent-border; @panel-accent-text; @panel-accent-heading-bg; @panel-accent-border);
-}
-
-.panel {
-    &.panel-default,
-    &.panel-primary,
-    &.panel-accent,
-    &.panel-success,
-    &.panel-info,
-    &.panel-warning,
-    &.panel-danger {
-        > .panel-heading {
-            border-color: @panel-inner-border;
-
-            .panel-actions {
-                color: @text-color;
-            }
-        }
-    }
-}
-
 @media (max-width: (@screen-xs-min - 1)) {
     .panel {
         > .panel-section {
@@ -554,70 +524,3 @@
         }
     }
 }*/
-
-
-// Variantes
-// -------------------------
-
-.panel-variant-box(primary, @brand-primary, @brand-primary, lighten(@brand-primary, 3%), #fff);
-.panel-variant-box(accent, @brand-accent, @brand-accent, lighten(@brand-accent, 3%), #fff);
-.panel-variant-box(success, @brand-success, @brand-success, lighten(@brand-success, 3%), #fff);
-.panel-variant-box(info, @brand-info, @brand-info, lighten(@brand-info, 3%), #fff);
-.panel-variant-box(warning, @brand-warning, @brand-warning, lighten(@brand-warning, 3%), #fff);
-.panel-variant-box(danger, @brand-danger, @brand-danger, lighten(@brand-danger, 3%), #fff);
-
-.panel-variant-top(default, @brand-primary, @panel-top-border-height);
-.panel-variant-top(primary, @brand-primary, @panel-top-border-height);
-.panel-variant-top(accent, @brand-accent, @panel-top-border-height);
-.panel-variant-top(success, @brand-success, @panel-top-border-height);
-.panel-variant-top(info, @brand-info, @panel-top-border-height);
-.panel-variant-top(warning, @brand-warning, @panel-top-border-height);
-.panel-variant-top(danger, @brand-danger, @panel-top-border-height);
-
-.panel-variant-wire(default, @text-color);
-.panel-variant-wire(primary, @brand-primary);
-.panel-variant-wire(accent, @brand-accent);
-.panel-variant-wire(success, @brand-success);
-.panel-variant-wire(info, @brand-info);
-.panel-variant-wire(warning, @brand-warning);
-.panel-variant-wire(danger, @brand-danger);
-
-.panel-variant-frame(default, @text-color);
-.panel-variant-frame(primary, @brand-primary);
-.panel-variant-frame(accent, @brand-accent);
-.panel-variant-frame(success, @brand-success);
-.panel-variant-frame(info, @brand-info);
-.panel-variant-frame(warning, @brand-warning);
-.panel-variant-frame(danger, @brand-danger);
-
-.panel-variant-lite(default, @text-color);
-.panel-variant-lite(primary, @brand-primary);
-.panel-variant-lite(accent, @brand-accent);
-.panel-variant-lite(success, @brand-success);
-.panel-variant-lite(info, @brand-info);
-.panel-variant-lite(warning, @brand-warning);
-.panel-variant-lite(danger, @brand-danger);
-
-.panel-variant-pref(default, @text-color);
-.panel-variant-pref(primary, @brand-primary);
-.panel-variant-pref(accent, @brand-accent);
-.panel-variant-pref(success, @brand-success);
-.panel-variant-pref(info, @brand-info);
-.panel-variant-pref(warning, @brand-warning);
-.panel-variant-pref(danger, @brand-danger);
-
-.panel-variant-label(default, @text-color);
-.panel-variant-label(primary, @brand-primary);
-.panel-variant-label(accent, @brand-accent);
-.panel-variant-label(success, @brand-success);
-.panel-variant-label(info, @brand-info);
-.panel-variant-label(warning, @brand-warning);
-.panel-variant-label(danger, @brand-danger);
-
-.panel-heading-variant(default, @gray-lighter, @text-color);
-.panel-heading-variant(primary, @brand-primary, #fff);
-.panel-heading-variant(accent, @brand-accent, #fff);
-.panel-heading-variant(success, @brand-success, #fff);
-.panel-heading-variant(info, @brand-info, #fff);
-.panel-heading-variant(warning, @brand-warning, #fff);
-.panel-heading-variant(danger, @brand-danger, #fff);

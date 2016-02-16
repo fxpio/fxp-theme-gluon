@@ -1,0 +1,70 @@
+//
+// Toggles Theme
+// --------------------------------------------------
+
+.form-control-md-toggle {
+    // unchecked
+    input[type="checkbox"] {
+        + .form-control-md-style {
+            background-color: @input-toggle-unchecked-lever-bg;
+
+            &:before {
+                background-color: @input-toggle-unchecked-toggle-bg;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: @input-toggle-unchecked-toggle-bg-hover;
+                }
+            }
+        }
+
+        &:focus,
+        &:active {
+            + .form-control-md-style {
+                &:after {
+                    background-color: @input-toggle-unchecked-toggle-bg-focus;
+                    .box-shadow(0 0 0 @input-toggle-focus-size @input-toggle-unchecked-toggle-bg-focus);
+                }
+            }
+        }
+    }
+
+    // disabled unchecked
+    input[type="checkbox"][disabled],
+    fieldset[disabled] & input[type="checkbox"] {
+        + .form-control-md-style {
+            &:hover {
+                &:before {
+                    background-color: @input-toggle-unchecked-toggle-bg-disabled;
+                }
+            }
+        }
+    }
+
+    // disabled unchecked
+    input[type="checkbox"][disabled],
+    fieldset[disabled] & input[type="checkbox"] {
+        + .form-control-md-style {
+            background-color: @input-toggle-unchecked-lever-bg-disabled;
+
+            &:before {
+                background-color: @input-toggle-unchecked-toggle-bg-disabled;
+            }
+
+            + span {
+                color: @input-toggle-color-placeholder-disabled;
+            }
+        }
+    }
+}
+
+// Toggle colors
+.toggle-variant(input-toggle; ~'');
+.toggle-variant(input-toggle-default; ~'.input-default');
+.toggle-variant(input-toggle-primary; ~'.input-primary');
+.toggle-variant(input-toggle-accent; ~'.input-accent');
+.toggle-variant(input-toggle-success; ~'.input-success');
+.toggle-variant(input-toggle-info; ~'.input-info');
+.toggle-variant(input-toggle-warning; ~'.input-warning');
+.toggle-variant(input-toggle-danger; ~'.input-danger');

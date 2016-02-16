@@ -11,6 +11,17 @@
     }
 }
 
+.badge-btn-flat-variant(@style; @color; @bg) {
+    .btn {
+        &.btn-@{style} {
+            .badge {
+                color: @color;
+                background-color: @bg;
+            }
+        }
+    }
+}
+
 .badge-btn-raised-variant(@style; @color; @bg) {
     .btn {
         &.btn-raised {

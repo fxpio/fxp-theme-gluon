@@ -22,11 +22,18 @@
 .control-label-required() {
     &.required::after, {
         content: "*";
-        color: @state-danger-border;
         font-size: @font-size-base;
         position: absolute;
         margin-left: floor(@padding-large-horizontal / 2 - @padding-large-horizontal * 0.14);
         top: -(floor(@padding-large-horizontal / 2 - @padding-large-horizontal * 0.14));
         .transition-transform(.2s cubic-bezier(.4,0,.2,1));
+    }
+
+    .control-label-required-color();
+}
+
+.control-label-required-color() {
+    &.required::after, {
+        color: @state-danger-border;
     }
 }

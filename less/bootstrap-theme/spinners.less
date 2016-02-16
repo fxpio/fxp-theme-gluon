@@ -12,6 +12,10 @@
     .animation(spinner-dash 1.5s ease-in-out infinite);
 }
 
+.spinner-floating {
+    .box-shadow(@spinner-shadow);
+}
+
 .spinner {
     position: relative;
     width: 44px;
@@ -30,10 +34,8 @@
     width: 90px;
     height: 90px;
     padding: 23px;
-    background-color: @spinner-floating-bg;
     .border-top-radius(50%);
     .border-bottom-radius(50%);
-    .box-shadow(@spinner-shadow);
 }
 
 .spinner-mini {
@@ -78,29 +80,3 @@
         stroke-dashoffset: -124;
     }
 });
-
-.keyframes(spinner-colored; {
-    100%, 0% {
-        stroke: @spinner-colored-color1;
-    }
-    40% {
-        stroke: @spinner-colored-color2;
-    }
-    66% {
-        stroke: @spinner-colored-color3;
-    }
-    80%, 90% {
-        stroke: @spinner-colored-color4;
-    }
-});
-
-// Variants
-// -------------------------
-
-.spinner-variant(default; @spinner-default-color);
-.spinner-variant(primary; @spinner-primary-color);
-.spinner-variant(accent; @spinner-accent-color);
-.spinner-variant(success; @spinner-success-color);
-.spinner-variant(info; @spinner-info-color);
-.spinner-variant(warning; @spinner-warning-color);
-.spinner-variant(danger; @spinner-danger-color);

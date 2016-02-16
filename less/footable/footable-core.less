@@ -27,7 +27,6 @@
 
             > td.footable-row-detail-cell {
                 border-top: none;
-                background-color: @footable-detail-bg;
                 .box-shadow(@footable-detail-inner-shadow);
             }
 
@@ -45,7 +44,6 @@
                 speak: none;
                 padding-top: @footable-toggle-padding-top;
                 padding-right: @footable-toggle-padding-right;
-                color: @footable-toggle-color;
                 float: left;
                 margin-left: @footable-toggle-margin-left;
                 width: @footable-toggle-width;
@@ -93,14 +91,12 @@
     display: table-cell;
     font-weight: @font-family-weight-bold;
     padding: 4px 15px;
-    color: @footable-detail-name-color;
 
     // sort
     > i.table-sort-icon {
         display: none;
         margin-left: 3px;
         vertical-align: middle;
-        color: @table-sort-icon-color;
     }
 
     &[data-table-sort=asc] {
@@ -135,23 +131,10 @@
 
         &:hover {
             cursor: pointer;
-            color: @footable-sort-header-hover-color;
         }
 
         > i.table-sort-icon {
             display: inline-block;
-        }
-
-        &[data-table-sort=asc] {
-            > i.table-sort-icon {
-                color: @footable-sort-icon-sorting-color;
-            }
-        }
-
-        &[data-table-sort=desc] {
-            > i.table-sort-icon {
-                color: @footable-sort-icon-sorting-color;
-            }
         }
     }
 }

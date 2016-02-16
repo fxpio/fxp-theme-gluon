@@ -1,0 +1,207 @@
+//
+// Forms Theme
+// --------------------------------------------------
+
+input,
+textarea {
+    &.form-control {
+        border-bottom-color: @input-border;
+    }
+}
+
+.form-group,
+.floating-group {
+    input:not([type="submit"]),
+    textarea {
+        ~ label:not(.btn) {
+            .form-floating-label-color();
+            &.control-label {
+                .control-label-required-color();
+            }
+        }
+
+        &:focus,
+        &.has-floating-content,
+        &.fixed-floating-label {
+            ~ label:not(.btn) {
+                color: @form-floating-label-color-focus;
+            }
+        }
+
+        &:focus {
+            border-bottom-color: @input-border-focus;
+        }
+    }
+
+    label.top-floating-label,
+    label.top-floating-label-choice {
+        .form-floating-label-color(@form-floating-label-color-focus);
+    }
+
+    .floating-bar {
+        &:before,
+        &:after {
+            background: @input-border-focus;
+        }
+    }
+}
+
+input,
+textarea,
+.form-group input,
+.floating-group input,
+.form-group textarea,
+.floating-group textarea {
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        border-color: @input-border-disabled;
+        color: @input-color-disabled;
+        .placeholder(@input-color-placeholder-disabled);
+
+        ~ label:not(.btn) {
+            color: @input-color-placeholder-disabled;
+        }
+
+        &.has-floating-content,
+        &.fixed-floating-label {
+            ~ label:not(.btn) {
+                color: @input-color-placeholder-disabled;
+            }
+        }
+    }
+}
+
+.form-control-state(success; @state-success-text; @state-success-bg; @state-success-border);
+.form-control-state(info; @state-info-text; @state-info-bg; @state-info-border);
+.form-control-state(warning; @state-warning-text; @state-warning-bg; @state-warning-border);
+.form-control-state(danger; @state-danger-text; @state-danger-bg; @state-danger-border);
+.form-control-state(error; @state-danger-text; @state-danger-bg; @state-danger-border);
+
+
+// Input file
+// --------------------------------------------------
+
+.form-control {
+    + .bootstrap-filestyle {
+        outline-color: @input-border-focus;
+    }
+}
+
+
+// Select
+// --------------------------------------------------
+
+select {
+    &.form-control {
+        border-bottom-color: @input-border;
+    }
+
+    &:hover {
+        background-color: @dropdown-bg-hover;
+    }
+
+    &:focus,
+    &:active {
+        background-color: @dropdown-bg !important;
+        border-bottom-color: transparent;
+    }
+
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        border-color: @input-border-disabled;
+        color: @input-color-disabled;
+        .placeholder(@input-color-placeholder-disabled);
+
+        &:focus,
+        &:active {
+            background-color: @dropdown-bg !important;
+            border-bottom-color: @input-border-disabled;
+        }
+
+        ~ label:not(.btn) {
+            color: @input-color-placeholder-disabled;
+        }
+
+        &.has-floating-content,
+        &.fixed-floating-label {
+            ~ label:not(.btn) {
+                color: @input-color-placeholder-disabled;
+            }
+        }
+    }
+}
+
+.has-error {
+    > select,
+    > div > select {
+        &.form-control {
+            &[disabled],
+            &[readonly],
+            fieldset[disabled] & {
+                &:focus,
+                &:active {
+                    border-bottom-color: @input-border-disabled;
+                }
+            }
+        }
+    }
+}
+
+
+// Checkbox / Radio
+// --------------------------------------------------
+
+.form-control-md {
+    // unchecked
+    input[type="checkbox"],
+    input[type="radio"] {
+        + .form-control-md-style {
+            &:before {
+                background-color: @input-unchecked-bg;
+                border-color: @input-border;
+            }
+
+            &:hover {
+                &:before {
+                    border-color: @input-unchecked-border-hover;
+                }
+            }
+        }
+
+        &:focus,
+        &:active {
+            + .form-control-md-style {
+                + span {
+                    &:before {
+                        background-color: @input-unchecked-bg-focus;
+                        .box-shadow(0 0 0 @input-radio-checkbox-focus-size @input-unchecked-bg-focus);
+                    }
+                }
+            }
+        }
+    }
+
+    // disabled
+    input[type="checkbox"][disabled],
+    input[type="radio"][disabled],
+    fieldset[disabled] & input[type="checkbox"],
+    fieldset[disabled] & input[type="radio"] {
+        + .form-control-md-style {
+            &:before {
+                background-color: @input-unchecked-bg-disabled;
+            }
+        }
+    }
+}
+
+// Checkbox/radio colors
+.form-control-color(input; ~'');
+.form-control-color(input-default; ~'.input-default');
+.form-control-color(input-primary; ~'.input-primary');
+.form-control-color(input-accent; ~'.input-accent');
+.form-control-color(input-success; ~'.input-success');
+.form-control-color(input-info; ~'.input-info');
+.form-control-color(input-warning; ~'.input-warning');
+.form-control-color(input-danger; ~'.input-danger');
