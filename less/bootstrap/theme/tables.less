@@ -1,0 +1,87 @@
+//
+// Tables
+// --------------------------------------------------
+
+table {
+    background-color: @table-bg;
+}
+
+caption {
+    color: @text-muted;
+}
+
+// Baseline styles
+
+.table {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                border-top-color: @table-border-color;
+            }
+        }
+    }
+
+    > thead > tr > th {
+        border-bottom-color: @table-border-color;
+    }
+
+    > tbody + tbody {
+        border-top-color: @table-border-color;
+    }
+
+    .table {
+        background-color: @body-bg;
+    }
+}
+
+// Bordered version
+
+.table-bordered {
+    border-color: @table-border-color;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                border-color: @table-border-color;
+            }
+        }
+    }
+}
+
+// Zebra-striping
+
+.table-striped {
+    > tbody > tr:nth-of-type(odd) {
+        background-color: @table-bg-accent;
+    }
+}
+
+// Hover effect
+
+.table-hover {
+    > tbody > tr:hover {
+        background-color: @table-bg-hover;
+    }
+}
+
+// Table backgrounds
+
+.table-row-variant(active; @table-bg-active);
+.table-row-variant(success; @state-success-bg);
+.table-row-variant(info; @state-info-bg);
+.table-row-variant(warning; @state-warning-bg);
+.table-row-variant(danger; @state-danger-bg);
+
+// Responsive tables
+
+.table-responsive {
+    @media screen and (max-width: @screen-xs-max) {
+        border-color: @table-border-color;
+    }
+}

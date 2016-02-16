@@ -1,0 +1,46 @@
+//
+// Forms
+// --------------------------------------------------
+
+legend {
+    color: @legend-color;
+    border-bottom-color: @legend-border-color;
+}
+
+output {
+    color: @input-color;
+}
+
+.form-control {
+    color: @input-color;
+    background-color: @input-bg;
+
+    .placeholder();
+
+    &::-ms-expand {
+        background-color: transparent;
+    }
+
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: @input-bg-disabled;
+    }
+}
+
+// Feedback states
+/*.has-success {
+    .form-control-validation(@state-success-text; @state-success-text; @state-success-bg);
+}
+.has-warning {
+    .form-control-validation(@state-warning-text; @state-warning-text; @state-warning-bg);
+}
+.has-error {
+    .form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+}*/
+
+// Help text
+
+.help-block {
+    color: lighten(@text-color, 25%);
+}

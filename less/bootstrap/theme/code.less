@@ -1,0 +1,29 @@
+//
+// Code (inline and block)
+// --------------------------------------------------
+
+// Inline and block code styles
+
+// Inline code
+code {
+    color: @code-color;
+    background-color: @code-bg;
+}
+
+// User input typically entered via keyboard
+kbd {
+    color: @kbd-color;
+    background-color: @kbd-bg;
+}
+
+// Blocks of code
+pre {
+    color: @pre-color;
+    background-color: @pre-bg;
+    border-color: @pre-border-color;
+
+    code {
+        color: inherit;
+        background-color: transparent;
+    }
+}

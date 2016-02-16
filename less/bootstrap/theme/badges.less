@@ -1,0 +1,21 @@
+//
+// Badges
+// --------------------------------------------------
+
+.badge {
+    color: @badge-color;
+    background-color: @badge-bg;
+
+    a& {
+        &:hover,
+        &:focus {
+            color: @badge-link-hover-color;
+        }
+    }
+
+    .list-group-item.active > &,
+    .nav-pills > .active > a > & {
+        color: @badge-active-color;
+        background-color: @badge-active-bg;
+    }
+}

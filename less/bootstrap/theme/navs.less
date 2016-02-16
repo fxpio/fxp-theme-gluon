@@ -1,0 +1,100 @@
+//
+// Navs
+// --------------------------------------------------
+
+.nav {
+    > li {
+        > a {
+            &:hover,
+            &:focus {
+                background-color: @nav-link-hover-bg;
+            }
+        }
+
+        &.disabled > a {
+            color: @nav-disabled-link-color;
+
+            &:hover,
+            &:focus {
+                color: @nav-disabled-link-hover-color;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .open > a {
+        &,
+        &:hover,
+        &:focus {
+            background-color: @nav-link-hover-bg;
+            border-color: @link-color;
+        }
+    }
+}
+
+// Tabs
+// -------------------------
+
+.nav-tabs {
+    border-bottom-color: @nav-tabs-border-color;
+
+    > li {
+        > a {
+            border-color: transparent;
+
+            &:hover {
+                border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
+            }
+        }
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @nav-tabs-active-link-hover-color;
+                background-color: @nav-tabs-active-link-hover-bg;
+                border-color: @nav-tabs-active-link-hover-border-color;
+                border-bottom-color: transparent;
+                cursor: default;
+            }
+        }
+    }
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+    > li {
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @nav-pills-active-link-hover-color;
+                background-color: @nav-pills-active-link-hover-bg;
+            }
+        }
+    }
+}
+
+// Nav variations
+// --------------------------------------------------
+
+.nav-tabs-justified {
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+        border-color: @nav-tabs-justified-link-border-color;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        > li > a {
+            border-bottom-color: @nav-tabs-justified-link-border-color;
+        }
+
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            border-bottom-color: @nav-tabs-justified-active-link-border-color;
+        }
+    }
+}

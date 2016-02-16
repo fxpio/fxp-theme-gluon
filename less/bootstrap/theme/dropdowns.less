@@ -1,0 +1,57 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+.dropdown-menu {
+    background-color: @dropdown-bg;
+    border: 1px solid @dropdown-fallback-border; // IE8 fallback
+    border: 1px solid @dropdown-border;
+
+    .divider {
+        .nav-divider(@dropdown-divider-bg);
+    }
+
+    > li > a {
+        color: @dropdown-link-color;
+    }
+}
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+    &:hover,
+    &:focus {
+        color: @dropdown-link-hover-color;
+        background-color: @dropdown-link-hover-bg;
+    }
+}
+
+// Active state
+.dropdown-menu > .active > a {
+    &,
+    &:hover,
+    &:focus {
+        color: @dropdown-link-active-color;
+        background-color: @dropdown-link-active-bg;
+    }
+}
+
+// Disabled state
+.dropdown-menu > .disabled > a {
+    &,
+    &:hover,
+    &:focus {
+        color: @dropdown-link-disabled-color;
+    }
+
+    // Nuke hover/focus effects
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
+// Dropdown section headers
+.dropdown-header {
+    color: @dropdown-header-color;
+}

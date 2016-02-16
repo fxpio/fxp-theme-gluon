@@ -1,0 +1,63 @@
+//
+// List groups
+// --------------------------------------------------
+
+.list-group-item {
+    background-color: @list-group-bg;
+    border-color: @list-group-border;
+}
+
+a.list-group-item,
+button.list-group-item {
+    color: @list-group-link-color;
+
+    .list-group-item-heading {
+        color: @list-group-link-heading-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: @list-group-link-hover-color;
+        background-color: @list-group-hover-bg;
+    }
+}
+
+.list-group-item {
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+        background-color: @list-group-disabled-bg;
+        color: @list-group-disabled-color;
+
+        .list-group-item-heading {
+            color: inherit;
+        }
+
+        .list-group-item-text {
+            color: @list-group-disabled-text-color;
+        }
+    }
+
+    &.active,
+    &.active:hover,
+    &.active:focus {
+        color: @list-group-active-color;
+        background-color: @list-group-active-bg;
+        border-color: @list-group-active-border;
+
+        .list-group-item-heading,
+        .list-group-item-heading > small,
+        .list-group-item-heading > .small {
+            color: inherit;
+        }
+
+        .list-group-item-text {
+            color: @list-group-active-text-color;
+        }
+    }
+}
+
+.list-group-item-variant(success; @state-success-bg; @state-success-text);
+.list-group-item-variant(info; @state-info-bg; @state-info-text);
+.list-group-item-variant(warning; @state-warning-bg; @state-warning-text);
+.list-group-item-variant(danger; @state-danger-bg; @state-danger-text);

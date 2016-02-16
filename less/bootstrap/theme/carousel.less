@@ -1,0 +1,27 @@
+//
+// Carousel
+// --------------------------------------------------
+
+.carousel-control {
+    color: @carousel-control-color;
+
+    &:hover,
+    &:focus {
+        color: @carousel-control-color;
+    }
+}
+
+.carousel-indicators {
+    li {
+        border-color: @carousel-indicator-border-color;
+        background-color: #000 \9; // IE8
+        background-color: rgba(0, 0, 0, 0); // IE9
+    }
+    .active {
+        background-color: @carousel-indicator-active-bg;
+    }
+}
+
+.carousel-caption {
+    color: @carousel-caption-color;
+}
