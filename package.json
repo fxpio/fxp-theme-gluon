@@ -7,6 +7,7 @@
     "grunt-cli": "^0.1.13",
     "load-grunt-tasks": "^3.2.0",
     "time-grunt": "^1.2.1",
+    "nunjucks": "^2.3.0",
     "grunt-nunjucks": "^0.1.4",
     "grunt-contrib-copy": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
