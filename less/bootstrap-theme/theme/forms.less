@@ -69,6 +69,13 @@ textarea,
                 color: @input-color-placeholder-disabled;
             }
         }
+
+        &:focus {
+            ~ .floating-bar:before,
+            ~ .floating-bar:after {
+                background: @input-border-disabled;
+            }
+        }
     }
 }
 
