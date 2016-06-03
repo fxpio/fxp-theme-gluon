@@ -357,6 +357,13 @@
             .navbar-brand {
                 width: @navbar-brand-width;
             }
+
+            .btn-navbar-home {
+                ~ .navbar-brand,
+                ~ .btn-group .navbar-brand {
+                    width: @navbar-brand-width-with-home-btn;
+                }
+            }
         }
 
         &.navbar-sidebar-full-locked-left {
@@ -366,6 +373,13 @@
 
             .navbar-brand {
                 width: auto;
+            }
+
+            .btn-navbar-home {
+                ~ .navbar-brand,
+                ~ .btn-group .navbar-brand {
+                    width: auto;
+                }
             }
         }
 
