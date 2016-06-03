@@ -6,6 +6,10 @@
     border-left-width: 0;
     border-right-width: 0;
 
+    &.sidebar-ready {
+        .transition(~"transform 0.2s, top .2s cubic-bezier(.4,0,.4,1), bottom .2s cubic-bezier(.4,0,.4,1)");
+    }
+
     .sidebar-header {
         display: block;
         position: relative;
