@@ -343,6 +343,25 @@
             }
         }
     }
+
+    .navbar-sidebar-locked-left:not(.navbar-sidebar-full-locked-left),
+    .navbar-sidebar-locked-right:not(.navbar-sidebar-full-locked-right) {
+        .navbar-brand {
+            &.navbar-brand-switch {
+                display: none;
+            }
+        }
+
+        .navbar-title {
+            &.start-icon {
+                padding-left: 0 !important;
+
+                &:before {
+                    content: "";
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: @screen-sm-min) {
