@@ -27,6 +27,51 @@
 }(function ($) {
     'use strict';
 
+    /**
+     * Refresh the top position of locked sidebar.
+     *
+     * @param {NavbarSidebar} self The navbar sidebar instance
+     * @param {Number|String} top  The value of top position
+     *
+     * @private
+     */
+    function refreshPositionTop (self, top) {
+        self.$lockedSidebars.each(function (index, sidebar) {
+            var $sidebar = $(sidebar),
+                data = $sidebar.data('st.sidebar');
+
+            if (data !== undefined) {
+                data.$element.css('top', top);
+                data.$swipe.css('top', top);
+                data.refresh();
+            }
+        });
+    }
+
+    /**
+     * Refresh the top position of locked sidebar.
+     *
+     * @param {NavbarSidebar} self The navbar sidebar instance
+     *
+     * @private
+     */
+    function refreshPosition (self) {
+        var top = self.$element.offset().top + self.$element.outerHeight();
+
+        refreshPositionTop(self, top);
+    }
+
+    /**
+     * Refresh the top position of locked sidebar.
+     *
+     * @param {jQuery.Event|Event} event The event
+     *
+     * @private
+     */
+    function onAnimationEnd (event) {
+        refreshPosition(event.data);
+    }
+
     // NAVBAR SIDEBAR CLASS DEFINITION
     // ===============================
 
@@ -41,13 +86,19 @@
     var NavbarSidebar = function (element, options) {
         var self       = this;
 
-        this.guid      = $.guid;
-        this.options   = $.extend(true, {}, NavbarSidebar.DEFAULTS, options);
-        this.$element  = $(element);
-        this.$sidebars = $(this.options.sidebarSelector);
+        this.guid            = $.guid;
+        this.options         = $.extend(true, {}, NavbarSidebar.DEFAULTS, options);
+        this.$element        = $(element);
+        this.$sidebars       = $(this.options.sidebarSelector);
+        this.$lockedSidebars = $(this.options.sidebarSelector + '.sidebar-locked:not(.sidebar-full-locked)');
 
         if (0 === this.$sidebars.length) {
             return;
+        }
+
+        if (this.$element.hasClass('navbar-fixed-top')) {
+            this.$element.on('webkitTransitionEnd.st.navbar-sidebar otransitionend.st.navbar-sidebar oTransitionEnd.st.navbar-sidebar msTransitionEnd.st.navbar-sidebar transitionend.st.navbar-sidebar', null, self, onAnimationEnd);
+            refreshPosition(this);
         }
 
         this.$sidebars.each(function (index, sidebar) {
@@ -80,7 +131,12 @@
      * @this NavbarSidebar
      */
     NavbarSidebar.prototype.destroy = function () {
+        if (this.$element.hasClass('navbar-fixed-top')) {
+            refreshPositionTop(this, '');
+        }
+
         this.$element
+            .off('webkitTransitionEnd.st.navbar-sidebar otransitionend.st.navbar-sidebar oTransitionEnd.st.navbar-sidebar msTransitionEnd.st.navbar-sidebar transitionend.st.navbar-sidebar', null, onAnimationEnd)
             .removeClass('navbar-sidebar-locked-left')
             .removeClass('navbar-sidebar-locked-right')
             .removeClass('navbar-sidebar-full-locked-left')
