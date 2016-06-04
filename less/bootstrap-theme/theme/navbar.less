@@ -34,6 +34,19 @@
     .navbar-title {
         color: @navbar-default-brand-color;
     }
+
+    .btn-navbar {
+        &.btn-profile-icon {
+            background-color: @brand-primary;
+            color: @navbar-inverse-color;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: lighten(@brand-primary, 14%) !important;
+            }
+        }
+    }
 }
 
 .navbar-inverse {
@@ -64,6 +77,19 @@
 
         .ripple {
             background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    .btn-navbar {
+        &.btn-profile-icon {
+            background-color: @navbar-inverse-toggle-icon-bar-bg;
+            color: @navbar-inverse-bg;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: lighten(@navbar-inverse-bg, 46%) !important;
+            }
         }
     }
 }
