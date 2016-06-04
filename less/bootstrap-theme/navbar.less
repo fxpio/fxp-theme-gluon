@@ -74,14 +74,26 @@
 }
 
 .btn-navbar-group {
-    padding: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom @btn-navbar-margin-horizontal;
+    padding: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom 0;
 
     > .btn-navbar {
         margin: 0 !important;
     }
 
+    .dropdown-menu {
+        &.pull-right {
+            right: @btn-navbar-margin-horizontal;
+        }
+    }
+
     &:last-child {
         padding-right: ceil((@grid-gutter-width / 2));
+
+        .dropdown-menu {
+            &.pull-right {
+                right: ceil((@grid-gutter-width / 2));
+            }
+        }
     }
 }
 
