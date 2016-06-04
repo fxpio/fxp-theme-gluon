@@ -67,6 +67,22 @@
     .open > .dropdown-toggle& {
         .box-shadow(none);
     }
+
+    .btn-group:last-child > & {
+        margin-right: ceil((@grid-gutter-width / 2));
+    }
+}
+
+.btn-navbar-group {
+    padding: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom @btn-navbar-margin-horizontal;
+
+    > .btn-navbar {
+        margin: 0 !important;
+    }
+
+    &:last-child {
+        padding-right: ceil((@grid-gutter-width / 2));
+    }
 }
 
 .btn-navbar-home {
