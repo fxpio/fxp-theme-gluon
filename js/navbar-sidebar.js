@@ -43,7 +43,16 @@
             if (data !== undefined) {
                 data.$element.css('top', top);
                 data.$swipe.css('top', top);
-                data.refresh();
+
+                if (undefined !== $sidebar.data('st.refresh-scroller-delay')) {
+                    clearTimeout($sidebar.data('st.refresh-scroller-delay'));
+                    $sidebar.removeData('st.refresh-scroller-delay');
+                }
+
+                $sidebar.data('st.refresh-scroller-delay', window.setTimeout(function () {
+                    $sidebar.removeData('st.refresh-scroller-delay');
+                    data.refresh();
+                }, self.options.refreshDelay));
             }
         });
     }
@@ -122,7 +131,8 @@
      * @type Array
      */
     NavbarSidebar.DEFAULTS = {
-        sidebarSelector: '[data-sidebar="true"]'
+        sidebarSelector: '[data-sidebar="true"]',
+        refreshDelay: 350
     };
 
     /**
@@ -131,6 +141,15 @@
      * @this NavbarSidebar
      */
     NavbarSidebar.prototype.destroy = function () {
+        this.$lockedSidebars.each(function (index, sidebar) {
+            var $sidebar = $(sidebar);
+
+            if (undefined !== $sidebar.data('st.refresh-scroller-delay')) {
+                clearTimeout($sidebar.data('st.refresh-scroller-delay'));
+                $sidebar.removeData('st.refresh-scroller-delay');
+            }
+        });
+
         if (this.$element.hasClass('navbar-fixed-top')) {
             refreshPositionTop(this, '');
         }
