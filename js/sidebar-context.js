@@ -38,6 +38,19 @@
         event.data.toggle();
     }
 
+    /**
+     * Close the sidebar context on window resize event.
+     *
+     * @param {Event} event The event
+     *
+     * @typedef {SidebarContext} Event.data The sidebar context instance
+     *
+     * @private
+     */
+    function onResizeWindow(event) {
+        event.data.close();
+    }
+
     // SIDEBAR CONTEXT CLASS DEFINITION
     // ================================
 
@@ -56,6 +69,10 @@
         this.$context = $(this.options.sidebarContextSelector, this.$element);
 
         this.$context.on('click.st.sidebar-context', null, this, onSwitch);
+
+        if (this.options.sidebarContextCloseOnResize) {
+            $(window).on('resize.st.sidebar-context' + this.guid, null, this, onResizeWindow);
+        }
     },
         old;
 
@@ -65,7 +82,8 @@
      * @type Array
      */
     SidebarContext.DEFAULTS = {
-        sidebarContextSelector: '.sidebar-header .sidebar-menu-toggle'
+        sidebarContextSelector:      '.sidebar-header .sidebar-menu-toggle',
+        sidebarContextCloseOnResize: true
     };
 
     /**
@@ -115,6 +133,7 @@
      * @this SidebarContext
      */
     SidebarContext.prototype.destroy = function () {
+        $(window).off('resize.st.sidebar-context' + this.guid, onResizeWindow);
         this.$context.off('click.st.sidebar-context', onSwitch);
 
         delete this.$element;
