@@ -11,12 +11,6 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/sonatra/sonatra-theme-gluon",
-  "main": [
-    "js/floating-label.js",
-    "js/resizing-textarea.js",
-    "js/sidebar-context.js",
-    "js/table-pager-default.js"
-  ],
   "dependencies": {
     "sonatra-bootstrap-dropdown-position": "latest",
     "sonatra-bootstrap-nav-scroll": "latest",
