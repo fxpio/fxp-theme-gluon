@@ -213,6 +213,10 @@
     body.table-pager-affixed & {
         .transform(translateY(-100%));
         .box-shadow(~"none !important");
+
+        .navbar-tall-fab-wrapper {
+            .scale(0);
+        }
     }
 }
 
@@ -228,6 +232,7 @@
             right: 10%;
             top: 100%;
             margin-top: -30px;
+            .transition(all 0.2s ease);
         }
 
         .navbar-title-tall {
