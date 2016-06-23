@@ -151,6 +151,15 @@
     };
 
     /**
+     * Refresh the top position of locked sidebar.
+     *
+     * @this NavbarSidebar
+     */
+    NavbarSidebar.prototype.refreshPosition = function () {
+        refreshPosition(this);
+    };
+
+    /**
      * Destroy instance.
      *
      * @this NavbarSidebar
