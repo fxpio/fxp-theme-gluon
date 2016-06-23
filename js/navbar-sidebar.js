@@ -36,6 +36,10 @@
      * @private
      */
     function refreshPositionTop (self, top) {
+        if (undefined === top || null === top || '' === top) {
+            return;
+        }
+
         self.$lockedSidebars.each(function (index, sidebar) {
             var $sidebar = $(sidebar),
                 data = $sidebar.data('st.sidebar');
