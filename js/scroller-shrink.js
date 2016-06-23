@@ -35,7 +35,7 @@
      * @private
      */
     function requireShrink () {
-        return /iPad|iPhone|iPod/.test(navigator.platform);
+        return $('html').attr('data-shrink') || /iPad|iPhone|iPod/.test(navigator.platform);
     }
 
     /**
