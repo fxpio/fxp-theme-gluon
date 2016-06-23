@@ -71,7 +71,7 @@
      * @private
      */
     function refreshPosition (self) {
-        var top = self.$element.offset().top + self.$element.outerHeight();
+        var top = self.$element.offset().top + self.$element.outerHeight() - $(document).scrollTop();
 
         refreshPositionTop(self, undefined === top ? 0 : top);
     }
