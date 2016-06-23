@@ -40,6 +40,8 @@
             return;
         }
 
+        top = 0 === top ? '' : top;
+
         self.$lockedSidebars.each(function (index, sidebar) {
             var $sidebar = $(sidebar),
                 data = $sidebar.data('st.sidebar');
@@ -71,7 +73,7 @@
     function refreshPosition (self) {
         var top = self.$element.offset().top + self.$element.outerHeight();
 
-        refreshPositionTop(self, top);
+        refreshPositionTop(self, undefined === top ? 0 : top);
     }
 
     /**
