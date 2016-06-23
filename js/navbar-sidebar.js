@@ -118,6 +118,13 @@
             refreshPosition(this);
         }
 
+        this.$element
+            .removeClass('navbar-sidebar-locked-left')
+            .removeClass('navbar-sidebar-locked-right')
+            .removeClass('navbar-sidebar-full-locked-left')
+            .removeClass('navbar-sidebar-full-locked-right')
+        ;
+
         this.$sidebars.each(function (index, sidebar) {
             var sidebarInstance = $(sidebar).data('st.sidebar'),
                 $sidebar = sidebarInstance.$element;
@@ -158,16 +165,8 @@
             }
         });
 
-        if (this.$element.hasClass('navbar-fixed-top')) {
-            refreshPositionTop(this, '');
-        }
-
         this.$element
             .off('webkitTransitionEnd.st.navbar-sidebar otransitionend.st.navbar-sidebar oTransitionEnd.st.navbar-sidebar msTransitionEnd.st.navbar-sidebar transitionend.st.navbar-sidebar', null, onAnimationEnd)
-            .removeClass('navbar-sidebar-locked-left')
-            .removeClass('navbar-sidebar-locked-right')
-            .removeClass('navbar-sidebar-full-locked-left')
-            .removeClass('navbar-sidebar-full-locked-right')
             .removeData('st.navbar-sidebar');
 
         delete this.$element;
