@@ -78,7 +78,9 @@
      * @private
      */
     function onAnimationEnd (event) {
-        refreshPosition(event.data);
+        if (event.target == event.data.$element.get(0)) {
+            refreshPosition(event.data);
+        }
     }
 
     // NAVBAR SIDEBAR CLASS DEFINITION
