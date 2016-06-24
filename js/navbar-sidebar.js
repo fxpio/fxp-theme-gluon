@@ -99,11 +99,14 @@
      * @private
      */
     function onLockBodyScroll (event) {
-        var $navbar = event.data.$element,
+        var self = event.data,
+            $body = $('body'),
+            $navbar = self.$element,
             nativeScrollWidth = event.eventData,
-            margin = 'sidebar:lock-body-scroll' === event.type ? nativeScrollWidth + 'px' : '';
+            margin = 'sidebar:lock-body-scroll' === event.type ? nativeScrollWidth + 'px' : '',
+            hasScrollbar = $body.get(0).scrollHeight > document.documentElement.clientHeight;
 
-        if (nativeScrollWidth > 0) {
+        if (nativeScrollWidth > 0 && hasScrollbar) {
             $navbar.css('margin-right', margin);
         }
     }
