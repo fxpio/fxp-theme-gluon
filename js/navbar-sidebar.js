@@ -89,6 +89,25 @@
         }
     }
 
+    /**
+     * Action on scoll of body is locked or unlocked.
+     *
+     * @param {jQuery.Event|Event} event The event
+     *
+     * @typedef {Number} jQuery.Event.eventData
+     *
+     * @private
+     */
+    function onLockBodyScroll (event) {
+        var $navbar = event.data.$element,
+            nativeScrollWidth = event.eventData,
+            margin = 'sidebar:lock-body-scroll' === event.type ? nativeScrollWidth + 'px' : '';
+
+        if (nativeScrollWidth > 0) {
+            $navbar.css('margin-right', margin);
+        }
+    }
+
     // NAVBAR SIDEBAR CLASS DEFINITION
     // ===============================
 
@@ -124,6 +143,10 @@
             .removeClass('navbar-sidebar-full-locked-left')
             .removeClass('navbar-sidebar-full-locked-right')
         ;
+
+        if (this.$element.hasClass('navbar-fixed-top') || this.$element.hasClass('navbar-fixed-bottom')) {
+            $(document).on('sidebar:lock-body-scroll.st.sidebar.st.navbar-sidebar sidebar:unlock-body-scroll.st.sidebar.st.navbar-sidebar', null, this, onLockBodyScroll);
+        }
 
         this.$sidebars.each(function (index, sidebar) {
             var sidebarInstance = $(sidebar).data('st.sidebar'),
@@ -173,6 +196,10 @@
                 $sidebar.removeData('st.refresh-scroller-delay');
             }
         });
+
+        if (this.$element.hasClass('navbar-fixed-top') || this.$element.hasClass('navbar-fixed-bottom')) {
+            $(document).off('sidebar:lock-body-scroll.st.sidebar.st.navbar-sidebar sidebar:unlock-body-scroll.st.sidebar.st.navbar-sidebar', null, onLockBodyScroll);
+        }
 
         this.$element
             .off('webkitTransitionEnd.st.navbar-sidebar otransitionend.st.navbar-sidebar oTransitionEnd.st.navbar-sidebar msTransitionEnd.st.navbar-sidebar transitionend.st.navbar-sidebar', null, onAnimationEnd)
