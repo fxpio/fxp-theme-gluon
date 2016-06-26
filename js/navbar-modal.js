@@ -94,7 +94,7 @@
      * @this NavbarModal
      */
     NavbarModal.prototype.destroy = function () {
-        $(document).off('show.bs.modal.st.navbar-modal hidden.bs.modal.st.navbar-modal', null, onLockBodyScroll);
+        $(document).off('show.bs.modal.st.navbar-modal-' + this.guid + ' hidden.bs.modal.st.navbar-modal-' + this.guid, null, onLockBodyScroll);
         this.$element.removeData('st.navbar-modal');
 
         delete this.$element;
