@@ -68,8 +68,8 @@
         }
     }
 
-    // NAVBAR SIDEBAR CLASS DEFINITION
-    // ===============================
+    // NAVBAR MODAL CLASS DEFINITION
+    // =============================
 
     /**
      * @constructor
@@ -101,8 +101,8 @@
     };
 
 
-    // NAVBAR SIDEBAR PLUGIN DEFINITION
-    // ================================
+    // NAVBAR MODAL PLUGIN DEFINITION
+    // ==============================
 
     function Plugin(option, value) {
         return this.each(function () {
@@ -130,8 +130,8 @@
     $.fn.navbarModal.Constructor = NavbarModal;
 
 
-    // NAVBAR SIDEBAR NO CONFLICT
-    // ==========================
+    // NAVBAR MODAL NO CONFLICT
+    // ========================
 
     $.fn.navbarModal.noConflict = function () {
         $.fn.navbarModal = old;
@@ -140,8 +140,8 @@
     };
 
 
-    // NAVBAR SIDEBAR DATA-API
-    // =======================
+    // NAVBAR MODAL DATA-API
+    // =====================
 
     $(window).on('load', function () {
         $('.navbar-fixed-top, .navbar-fixed-bottom').each(function () {
