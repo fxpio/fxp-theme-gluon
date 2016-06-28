@@ -204,8 +204,6 @@
 // --------------------------------------------------
 
 .navbar {
-    height: @navbar-height;
-
     &.headroom {
         .transition(0.2s ease);
         .transition-delay(0.2s);
@@ -220,7 +218,7 @@
         .transform(translateY(-100%));
         .box-shadow(~"none !important");
 
-        .navbar-tall-fab-wrapper {
+        .navbar-fab-wrapper {
             .scale(0);
         }
     }
@@ -233,15 +231,6 @@
     &.navbar-tall,
     &.navbar-tall-medium,
     &.navbar-tall-large {
-        .navbar-tall-fab-wrapper {
-            position: absolute;
-            right: 10%;
-            top: 100%;
-            margin-top: -30px;
-            .transition(all 0.2s ease);
-            .transition-delay(0.5s);
-        }
-
         .navbar-title-tall {
             .transition(font 0.2s ease);
             font-size: @font-size-h3;
@@ -249,6 +238,36 @@
     }
 }
 
+.navbar-tall-variant(~"", @navbar-tall-height, @navbar-tall-container-padding, @navbar-affix-tall-transform);
+.navbar-tall-variant(~"-medium", @navbar-tall-height-medium, @navbar-tall-container-padding-medium, @navbar-affix-tall-transform-medium);
+.navbar-tall-variant(~"-large", @navbar-tall-height-large, @navbar-tall-container-padding-large, @navbar-affix-tall-transform-large);
+
+// Navbar FAB
+// --------------------------------------------------
+
+.navbar {
+    &.navbar-fab {
+        height: @navbar-height + @navbar-fab-height;
+        .transition(~"height 0.2s ease, min-height 0.2s ease");
+
+        &.navbar-fixed-top {
+            .transition(~"transform 0.2s ease, height 0.2s ease, min-height 0.2s ease");
+        }
+
+        .navbar-fab-wrapper {
+            position: absolute;
+            right: 10%;
+            top: 100%;
+            margin-top: -30px;
+            .transition(all 0.2s ease);
+            .transition-delay(0.5s);
+        }
+    }
+}
+
+.navbar-tall-variant(~".navbar-fab", @navbar-tall-height, @navbar-tall-container-padding, @navbar-affix-tall-transform, @navbar-fab-height);
+.navbar-tall-variant(~"-medium.navbar-fab", @navbar-tall-height-medium, @navbar-tall-container-padding-medium, @navbar-affix-tall-transform-medium, @navbar-fab-height);
+.navbar-tall-variant(~"-large.navbar-fab", @navbar-tall-height-large, @navbar-tall-container-padding-large, @navbar-affix-tall-transform-large, @navbar-fab-height);
 
 // Navbar Responsive
 // --------------------------------------------------

@@ -2,15 +2,15 @@
 // Navbar mixins
 // --------------------------------------------------
 
-.navbar-tall-variant(@name, @height, @container-padding, @affix-tall-transform) {
+.navbar-tall-variant(@name, @height, @container-padding, @affix-tall-transform, @height-padding: 0) {
     .navbar {
         &.navbar-tall@{name} {
-            min-height: @height;
+            min-height: @height + @height-padding;
 
             &.navbar-fixed-top {
                 + .container,
                 + .container-fluid {
-                    padding-top: @container-padding;
+                    padding-top: @container-padding + (@height-padding * 2);
                 }
             }
         }
@@ -22,13 +22,15 @@
                 &.navbar-fixed-top {
                     &.affix-tall {
                         &.affix {
+                            min-height: @height;
+
                             .transform(translateY(-(@affix-tall-transform)));
 
                             .navbar-title-tall {
                                 font-size: @font-size-large;
                             }
 
-                            .navbar-tall-fab-wrapper {
+                            .navbar-fab-wrapper {
                                 .scale(0);
                             }
                         }

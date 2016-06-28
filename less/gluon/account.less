@@ -17,8 +17,16 @@
         float: right;
     }
 
-    &.navbar-fixed-top + .container {
-        padding-top: @navbar-height + @navbar-margin-bottom + 1;
+    &.navbar-fixed-top {
+        + .container {
+            padding-top: @navbar-height + @navbar-margin-bottom + 1;
+        }
+
+        &.navbar-fab {
+            + .container {
+                padding-top: @navbar-height + (@navbar-fab-height * 2) + @navbar-margin-bottom + 1;
+            }
+        }
     }
 }
 
