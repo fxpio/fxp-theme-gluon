@@ -254,6 +254,13 @@
             .transition(~"transform 0.2s ease, height 0.2s ease, min-height 0.2s ease");
         }
 
+        &.navbar-fixed-top {
+            + .container,
+            + .container-fluid {
+                padding-top: @navbar-fab-height * 2;
+            }
+        }
+
         .navbar-fab-wrapper {
             position: absolute;
             right: 10%;
