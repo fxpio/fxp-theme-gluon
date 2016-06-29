@@ -257,7 +257,7 @@
         &.navbar-fixed-top {
             + .container,
             + .container-fluid {
-                padding-top: @navbar-fab-height * 2;
+                padding-top: @navbar-fab-height + @navbar-margin-bottom;
             }
         }
 
@@ -269,12 +269,20 @@
             .transition(all 0.2s ease);
             .transition-delay(0.5s);
         }
+
+        &.affix {
+            height: @navbar-height;
+
+            .navbar-fab-wrapper {
+                .scale(0);
+            }
+        }
     }
 }
 
-.navbar-tall-variant(~".navbar-fab", @navbar-tall-height, @navbar-tall-container-padding, @navbar-affix-tall-transform, @navbar-fab-height);
-.navbar-tall-variant(~"-medium.navbar-fab", @navbar-tall-height-medium, @navbar-tall-container-padding-medium, @navbar-affix-tall-transform-medium, @navbar-fab-height);
-.navbar-tall-variant(~"-large.navbar-fab", @navbar-tall-height-large, @navbar-tall-container-padding-large, @navbar-affix-tall-transform-large, @navbar-fab-height);
+.navbar-tall-variant(~".navbar-fab", @navbar-tall-height, @navbar-tall-container-padding + @navbar-margin-bottom, @navbar-affix-tall-transform, @navbar-fab-height);
+.navbar-tall-variant(~"-medium.navbar-fab", @navbar-tall-height-medium, @navbar-tall-container-padding-medium + @navbar-margin-bottom, @navbar-affix-tall-transform-medium, @navbar-fab-height);
+.navbar-tall-variant(~"-large.navbar-fab", @navbar-tall-height-large, @navbar-tall-container-padding-large + @navbar-margin-bottom, @navbar-affix-tall-transform-large, @navbar-fab-height);
 
 // Navbar Responsive
 // --------------------------------------------------
