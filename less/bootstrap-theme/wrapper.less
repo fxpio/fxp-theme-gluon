@@ -51,9 +51,15 @@ body,
 
 html.scroller-shrink {
     body {
+        overflow-y: scroll;
+
+        &.modal-open {
+            overflow-y: hidden;
+        }
+
         > .container-main {
             height: auto;
-            overflow-y: inherit;
+            overflow-y: auto;
             -webkit-overflow-scrolling: auto;
         }
     }
