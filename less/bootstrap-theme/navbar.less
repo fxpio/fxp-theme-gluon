@@ -74,7 +74,7 @@
 }
 
 .btn-navbar-group {
-    padding: @btn-navbar-margin-top @btn-navbar-margin-horizontal @btn-navbar-margin-bottom 0;
+    padding: @btn-navbar-margin-top 0;
 
     > .btn {
         &:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -83,7 +83,7 @@
     }
 
     > .btn-navbar {
-        margin: 0 !important;
+        margin: 0 @btn-navbar-margin-horizontal 0 0 !important;
     }
 
     .dropdown-menu {
@@ -94,6 +94,10 @@
 
     &:last-child {
         padding-right: ceil((@grid-gutter-width / 2));
+
+        > .btn-navbar {
+            margin: 0 !important;
+        }
 
         .dropdown-menu {
             &.pull-right {
