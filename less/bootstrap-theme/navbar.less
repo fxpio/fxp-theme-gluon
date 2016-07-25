@@ -71,6 +71,19 @@
     .btn-group:last-child > & {
         margin-right: ceil((@grid-gutter-width / 2));
     }
+
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        width: @btn-navbar-height + 2;
+        height: @btn-navbar-height + 2;
+        .border-top-radius(50%);
+        .border-bottom-radius(50%);
+    }
 }
 
 .btn-navbar-group {
