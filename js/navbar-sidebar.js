@@ -106,7 +106,7 @@
             isLock = 'sidebar:lock-body-scroll' === event.type,
             margin = isLock ? nativeScrollWidth + 'px' : '',
             hasScrollbar = $body.get(0).scrollHeight > document.documentElement.clientHeight
-                    && 'hidden' !== self.$body.css('overflow-y');
+                    && 'hidden' !== $body.css('overflow-y');
 
         if (nativeScrollWidth > 0 && (hasScrollbar || !isLock)) {
             $navbar.css('margin-right', margin);
