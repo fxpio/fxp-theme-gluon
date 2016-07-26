@@ -28,6 +28,7 @@ body,
                 margin-top: -(@navbar-height + (@navbar-fab-height * 2) + @navbar-margin-bottom);
             }
         }
+
         &.container-tall {
             padding-top: @navbar-tall-height + @navbar-margin-bottom;
 
@@ -49,6 +50,13 @@ body,
 
             &.container-fab {
                 padding-top: @navbar-tall-height-large + (@navbar-fab-height * 2) + (@navbar-margin-bottom / 2);
+            }
+        }
+
+        &.container-fab {
+            > .container,
+            > .container-fluid {
+                padding-top: 0 !important;
             }
         }
 
