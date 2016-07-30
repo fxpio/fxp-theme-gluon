@@ -253,6 +253,11 @@
             .transition(font 0.2s ease);
             font-size: @font-size-h3;
         }
+
+        .navbar-bottom {
+            position: absolute;
+            bottom: 0;
+        }
     }
 }
 
@@ -279,6 +284,11 @@
             }
         }
 
+        .navbar-bottom {
+            position: absolute;
+            bottom: @navbar-fab-height;
+        }
+
         .navbar-fab-wrapper {
             position: absolute;
             right: 10%;
@@ -293,6 +303,10 @@
 
             .navbar-fab-wrapper {
                 .scale(0);
+            }
+
+            .navbar-bottom {
+                bottom: 0;
             }
         }
     }
