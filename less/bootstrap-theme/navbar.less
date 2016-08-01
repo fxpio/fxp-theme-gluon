@@ -218,6 +218,22 @@
     }
 }
 
+// Navbar Nav
+// --------------------------------------------------
+
+.navbar {
+    .nav {
+        > li {
+            > a {
+                height: @navbar-height;
+                padding-top: round(@navbar-height / 3);
+                padding-bottom: round(@navbar-height / 3);
+                line-height: round(@navbar-height / 3);
+            }
+        }
+    }
+}
+
 // Navbar headroom
 // --------------------------------------------------
 
@@ -252,6 +268,10 @@
         .navbar-title-tall {
             .transition(font 0.2s ease);
             font-size: @font-size-h3;
+        }
+
+        .navbar-middle {
+            margin-top: 30px;
         }
 
         .navbar-bottom {

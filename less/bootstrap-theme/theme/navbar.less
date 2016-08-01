@@ -92,6 +92,25 @@
             }
         }
     }
+
+    .nav-scrollable {
+        &.is-nav-tabs {
+            &:before {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .nav {
+        > li {
+            &,
+            &.active {
+                > a {
+                    color: @navbar-inverse-link-color;
+                }
+            }
+        }
+    }
 }
 
 // Navbar Responsive
