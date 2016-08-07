@@ -62,6 +62,10 @@
             margin = 'show' === event.type ? self.nativeScrollWidth + 'px' : '';
 
         if (self.nativeScrollWidth > 0) {
+            if ('' === margin && $navbar.attr('data-navbar-modal-skip')) {
+                margin = self.nativeScrollWidth + 'px';
+            }
+
             $navbar.css('margin-right', margin);
         }
     }
