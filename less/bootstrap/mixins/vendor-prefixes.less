@@ -27,6 +27,13 @@
     flex: @values;
 }
 
+.flex-wrap(@values) {
+    -webkit-flex-wrap: @values;
+    -moz-flex-wrap: @values;
+    -ms-flex-wrap: @values;
+    flex-wrap: @values;
+}
+
 .keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
     @-webkit-keyframes @name { @arguments(); }
