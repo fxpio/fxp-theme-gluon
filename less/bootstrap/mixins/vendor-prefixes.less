@@ -34,6 +34,13 @@
     flex-wrap: @values;
 }
 
+.flex-direction(@values) {
+    -webkit-flex-direction: @values;
+    -moz-flex-direction: @values;
+    -ms-flex-direction: @values;
+    flex-direction: @values;
+}
+
 .keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
     @-webkit-keyframes @name { @arguments(); }
