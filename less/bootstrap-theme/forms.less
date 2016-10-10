@@ -103,7 +103,7 @@ textarea {
                 .form-floating-label-top();
 
                 &.control-label.required::after {
-                    .scale(0);
+                    .scale(0.7);
                 }
             }
         }
@@ -126,11 +126,21 @@ textarea {
     }
 
     label.top-floating-label {
+        .control-label-required();
         .form-floating-label-top();
+
+        &.required::after {
+            .scale(0.7);
+        }
     }
 
     label.top-floating-label-choice {
+        .control-label-required();
         .form-floating-label-top(-5);
+
+        &.required::after {
+            .scale(0.7);
+        }
     }
 
     .floating-bar {
