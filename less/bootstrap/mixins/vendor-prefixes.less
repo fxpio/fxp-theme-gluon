@@ -48,6 +48,20 @@
     flex-flow: @values;
 }
 
+.flex-grow(@values) {
+    -webkit-flex-grow: @values;
+    -moz-flex-grow: @values;
+    -ms-flex-grow: @values;
+    flex-grow: @values;
+}
+
+.justify-content(@values) {
+    -webkit-justify-content: @values;
+    -moz-justify-content: @values;
+    -ms-justify-content: @values;
+    justify-content: @values;
+}
+
 .keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
     @-webkit-keyframes @name { @arguments(); }
