@@ -308,6 +308,79 @@ select {
     }
 }
 
+// Date Choices
+// --------------------------------------------------
+
+.date-choice-wrapper {
+    > select.form-control {
+        width: auto;
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.date-text-wrapper {
+    > .floating-group {
+        display: inline-block;
+    }
+
+    input.form-control {
+        width: 24px;
+        text-align: center;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    > .floating-group:first-child input.form-control,
+    > input.form-control:first-child {
+        margin-left: 0;
+    }
+
+    > .floating-group:last-child input.form-control,
+    > input.form-control:last-child {
+        width: 40px;
+        margin-right: 0;
+    }
+
+    &.date-text-block {
+        .flexbox();
+        .justify-content(space-between);
+
+        > span {
+            .flex-grow(0);
+        }
+
+        > div {
+            text-align: center;
+            .flex-grow(2);
+
+        }
+
+        input.form-control {
+            margin: 0;
+            width: 100%;
+            min-width: 24px;
+        }
+
+        > .floating-group:last-child input.form-control,
+        > input.form-control:last-child {
+            width: 100%;
+            min-width: 40px;
+        }
+    }
+}
+
+.form-group {
+    .date-text-wrapper {
+        &.date-text-block {
+            > span {
+                line-height: @input-height-base;
+            }
+        }
+    }
+}
+
 
 // Checkbox / Radio
 // --------------------------------------------------
