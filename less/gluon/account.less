@@ -35,12 +35,24 @@
     text-align: left;
 
     .logo-wrapper {
-        padding-bottom: 41px;
+        padding-bottom: 23px;
         text-align: center;
 
-        > img {
+        > img,
+        > a img {
             height: @account-logo-height;
         }
+
+        > a {
+            display: inline-block;
+        }
+    }
+
+    .account-title {
+        text-align: center;
+        font-size: @font-size-h2;
+        padding-bottom: 10px;
+        color: lighten(@gray-light, 10%);
     }
 
     .account-links {
@@ -58,7 +70,7 @@
     }
 
     .buttons {
-        margin-top: @form-group-margin-bottom * 2;
+        margin-top: floor(@form-group-margin-bottom * 1.5);
     }
 
     .footer-link {
@@ -85,17 +97,8 @@
         }
 
         .btn {
+            width: 100%;
             margin-bottom: 22px;
-        }
-    }
-}
-
-@media (max-width: @screen-xs-max) {
-    .account-wrapper {
-        .buttons {
-            .btn {
-                width: 100%;
-            }
         }
     }
 }
