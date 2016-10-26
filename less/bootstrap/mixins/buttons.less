@@ -117,3 +117,45 @@
         }
     }
 }
+
+.button-variant-flat-raised-color(@color; @bg; @bg-hover; @bg-active; @color-disabled; @bg-disabled) {
+    &.btn-flat-raised {
+        .button-variant-flat-raised-content(@color; @bg; @bg-hover; @bg-active; @color-disabled; @bg-disabled);
+    }
+}
+
+.button-variant-flat-raised-content(@color; @bg; @bg-hover; @bg-active; @color-disabled; @bg-disabled) {
+    color: @color;
+    background-color: @bg;
+
+    &:hover,
+    &:focus {
+        color: @color;
+        background-color: @bg-hover;
+    }
+
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        background-color: @bg-active !important;
+    }
+
+    &.btn-ripple:active,
+    &.btn-ripple.active,
+    .open > .dropdown-toggle.btn-ripple& {
+        background-color: @bg !important;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: @bg-disabled !important;
+            color: @color-disabled;
+        }
+    }
+}
