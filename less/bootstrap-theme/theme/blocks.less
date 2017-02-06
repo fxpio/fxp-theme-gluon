@@ -39,9 +39,21 @@
         > a,
         > .choice-item {
             border-color: @gray-lighter;
+
+            &.disabled {
+                border-color: lighten(@gray-lighter, 1%);
+                color: lighten(@gray-light, 25%);
+            }
         }
     }
 }
+
+.block-collection-color(primary);
+.block-collection-color(accent);
+.block-collection-color(success);
+.block-collection-color(info);
+.block-collection-color(warning);
+.block-collection-color(danger);
 
 // Checkbox / Radio
 // --------------------------------------------------

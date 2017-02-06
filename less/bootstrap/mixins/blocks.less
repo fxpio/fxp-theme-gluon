@@ -1,5 +1,23 @@
 // Block control (checkbox/radio)
 
+.block-collection-color(@style: default) {
+    @color: "brand-@{style}";
+
+    .block-collection {
+        &.choice-items {
+            > span,
+            > div,
+            > a,
+            > .choice-item {
+                &.block-@{style}:not(.disabled) {
+                    border-color: lighten(@@color, 1%);
+                    color: @@color;
+                }
+            }
+        }
+    }
+}
+
 .block-control-color(@style: default) {
     @color: "input-@{style}-checked-bg";
 
