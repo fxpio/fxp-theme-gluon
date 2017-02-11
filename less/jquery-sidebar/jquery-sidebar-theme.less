@@ -11,6 +11,11 @@
         .sidebar-header-profile-icon {
             background-color: @sidebar-default-header-profile-icon-bg;
             color: @sidebar-default-header-profile-icon-color;
+
+            .sidebar-header-profile-icon-img {
+                background-color: transparent;
+                color: transparent;
+            }
         }
     }
 
@@ -78,8 +83,13 @@
         }
 
         .sidebar-item-icon {
-            &.bg-img {
+            &.bg-icon {
                 background-color: @sidebar-default-icon-bg;
+
+                &.bg-img {
+                    background-color: transparent;
+                    color: transparent;
+                }
             }
         }
     }
@@ -94,8 +104,13 @@
         }
 
         .sidebar-item-icon {
-            &.bg-img {
+            &.bg-icon {
                 background-color: @sidebar-inverse-icon-bg;
+
+                &.bg-img {
+                    background-color: transparent;
+                    color: transparent;
+                }
             }
         }
     }
