@@ -112,6 +112,8 @@
             .flexbox();
 
             .list-card-main {
+                word-break: break-all;
+                word-break: break-word;
                 .flex(1);
             }
 
@@ -130,8 +132,8 @@
 
             .list-card-details {
                 .badge {
-                    margin-top: 4px;
-                    margin-right: 4px;
+                    margin-top: 5px;
+                    margin-right: 5px;
 
                     &:last-child {
                         margin-right: 0;
@@ -142,6 +144,17 @@
             .list-card-actions {
                 .badge {
                     margin-top: 3px;
+                }
+
+                .btn {
+                    + .btn,
+                    + .tooltip + .btn {
+                        margin-left: 5px;
+                    }
+                }
+
+                + .list-card-actions {
+                    padding-left: 0;
                 }
             }
 
@@ -178,4 +191,21 @@
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-transform: translate3d(0, 0, 0);// Fix delay rendering on the scrolling of parent
+}
+
+@media (max-width: @screen-xs-max) {
+    .table {
+        &.table-list {
+            .list-card {
+                .list-card-actions {
+                    padding: 0 5px;
+
+                    .list-status {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
 }
