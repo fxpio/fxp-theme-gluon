@@ -538,23 +538,12 @@
 }
 
 @media (max-width: @screen-xs-max) {
-    .col-xs-12,
-    .col-sm-12,
-    .col-md-12,
-    .col-lg-12,
-    .col-sm-6,
-    .col-md-6,
-    .col-lg-6,
-    .col-sm-3 {
-        > .panel,
-        > form > .panel,
-        > .tab-content > .panel {
-            &.panel-main {
-                margin-left: -(ceil((@grid-gutter-width / 2)));
-                margin-right: -(floor((@grid-gutter-width / 2)));
-                .border-top-radius(0);
-                .border-bottom-radius(0);
-            }
+    .panel {
+        &.panel-main {
+            margin-left: -(ceil((@grid-gutter-width / 2)));
+            margin-right: -(floor((@grid-gutter-width / 2)));
+            .border-top-radius(0);
+            .border-bottom-radius(0);
         }
     }
 }
