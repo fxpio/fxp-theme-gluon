@@ -45,6 +45,15 @@
 }
 
 @media (max-width: @screen-xs-max) {
+    .thumbnail {
+        &.thumbnail-main {
+            margin-left: -(ceil((@grid-gutter-width / 2)));
+            margin-right: -(floor((@grid-gutter-width / 2)));
+            .border-top-radius(0);
+            .border-bottom-radius(0);
+        }
+    }
+
     .row-xs-flex {
         margin-bottom: @line-height-computed;
 
