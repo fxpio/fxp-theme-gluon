@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    "css/font-awesome.css": "bower_components/font-awesome/less/font-awesome.less",
+                    "css/font-awesome.css": "node_modules/font-awesome/less/font-awesome.less",
                     "css/bootstrap.css": "less/bootstrap/bootstrap.less",
                     "css/bootstrap-theme.css": "less/bootstrap-theme/bootstrap-theme.less",
                     "css/footable.css": "less/footable/footable.less",
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: ['bower_components/bootstrap/fonts/*', 'bower_components/font-awesome/fonts/*'],
+                        src: ['node_modules/bootstrap/fonts/*', 'node_modules/font-awesome/fonts/*'],
                         dest: 'fonts/',
                         filter: 'isFile'
                     }

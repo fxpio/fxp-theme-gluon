@@ -34,22 +34,8 @@ This library uses:
 Installation
 ------------
 
-Installation is a quick:
-
-Add library in your `bower.json`:
-
-```json
-{
-    "dependencies": {
-        "sonatra-theme-gluon": "latest"
-    }
-}
 ```
-
-Launch bower:
-
-```bash
-$ bower install
+npm install @sonatra/theme-gluon --save
 ```
 
 Dev installation
@@ -59,12 +45,6 @@ Dev installation
 
 ```
 npm install
-```
-
-### Use Bower
-
-```
-bower install
 ```
 
 ### Use grunt

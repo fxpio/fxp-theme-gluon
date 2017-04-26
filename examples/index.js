@@ -1,7 +1,7 @@
 /*
  * This file is part of the Sonatra package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) FranÃ§ois Pluchino <francois.pluchino@sonatra.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -119,7 +119,7 @@ http.createServer(function (req, res) {
         return;
     }
 
-    if (renderAsset(res, fs, mime, page, '/bower_components/', 'bower_components')) {
+    if (renderAsset(res, fs, mime, page, '/node_modules/', 'node_modules')) {
         return;
     }
 
