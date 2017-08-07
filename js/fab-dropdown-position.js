@@ -60,7 +60,7 @@
         var self = event.data,
             $fab = self.$element,
             isLock = 'show' === event.type,
-            fabPosition = $fab.hasClass('btn-group-fab-bottom-right') ? 'right' : 'left',
+            fabPosition = $fab.hasClass('btn-group-fab-top-right') || $fab.hasClass('btn-group-fab-bottom-right') ? 'right' : 'left',
             margin = isLock ? self.nativeScrollWidth + 'px' : '',
             hasScrollbar = self.$body.get(0).scrollHeight > document.documentElement.clientHeight
                     && 'hidden' !== self.$body.css('overflow-y');
@@ -156,7 +156,7 @@
     // ==============================
 
     $(window).on('load', function () {
-        $('.btn-group-fab-bottom-left, .btn-group-fab-bottom-right').each(function () {
+        $('.btn-group-fab-top-left, .btn-group-fab-top-right, .btn-group-fab-bottom-left, .btn-group-fab-bottom-right').each(function () {
             var $this = $(this);
             Plugin.call($this, $this.data());
         });
