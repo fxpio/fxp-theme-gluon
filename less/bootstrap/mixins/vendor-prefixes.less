@@ -79,3 +79,10 @@
     -ms-transform: @argument; // IE9 only
     transform: @argument;
 }
+
+.transition-transform-multi(@transformTransition, @transition) {
+    -webkit-transition: -webkit-transform @transformTransition, @transition;
+    -moz-transition: -moz-transform @transformTransition, @transition;
+    -o-transition: -o-transform @transformTransition, @transition;
+    transition: transform @transformTransition, @transition;
+}
