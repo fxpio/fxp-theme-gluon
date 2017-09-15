@@ -1,4 +1,6 @@
 css/
 fonts/
 node_modules/
+package-lock.json
+yarn.lock
 .rebooted
