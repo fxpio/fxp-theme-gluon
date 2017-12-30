@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -85,7 +85,7 @@
         this.$body             = $('body');
         this.nativeScrollWidth = getNativeScrollWidth();
 
-        $(document).on('show.bs.dropdown.st.navbar-dropdown-position-' + this.guid + ' hidden.bs.dropdown.st.navbar-dropdown-position-' + this.guid, null, this, onLockBodyScroll);
+        $(document).on('show.bs.dropdown.fxp.navbar-dropdown-position-' + this.guid + ' hidden.bs.dropdown.fxp.navbar-dropdown-position-' + this.guid, null, this, onLockBodyScroll);
     },
         old;
 
@@ -95,7 +95,7 @@
      * @this NavbarDropdownPosition
      */
     NavbarDropdownPosition.prototype.destroy = function () {
-        $(document).off('show.bs.dropdown.st.navbar-dropdown-position-' + this.guid + ' hidden.bs.dropdown.st.navbar-dropdown-position-' + this.guid, null, onLockBodyScroll);
+        $(document).off('show.bs.dropdown.fxp.navbar-dropdown-position-' + this.guid + ' hidden.bs.dropdown.fxp.navbar-dropdown-position-' + this.guid, null, onLockBodyScroll);
         this.$element.removeData('st.navbar-dropdown-position');
 
         delete this.$element;

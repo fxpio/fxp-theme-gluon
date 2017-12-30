@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -19,7 +19,7 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery', 'sonatra-jquery-sidebar'], factory);
+        define(['jquery', 'fxp-jquery-sidebar'], factory);
     } else {
         // Browser globals
         factory(jQuery);
@@ -138,7 +138,7 @@
         }
 
         if (this.$element.hasClass('navbar-fixed-top')) {
-            this.$element.on('webkitTransitionEnd.st.navbar-sidebar otransitionend.st.navbar-sidebar oTransitionEnd.st.navbar-sidebar msTransitionEnd.st.navbar-sidebar transitionend.st.navbar-sidebar', null, self, onAnimationEnd);
+            this.$element.on('webkitTransitionEnd.fxp.navbar-sidebar otransitionend.fxp.navbar-sidebar oTransitionEnd.fxp.navbar-sidebar msTransitionEnd.fxp.navbar-sidebar transitionend.fxp.navbar-sidebar', null, self, onAnimationEnd);
             refreshPosition(this);
         }
 
@@ -150,7 +150,7 @@
         ;
 
         if (this.$element.hasClass('navbar-fixed-top') || this.$element.hasClass('navbar-fixed-bottom')) {
-            $(document).on('sidebar:lock-body-scroll.st.sidebar.st.navbar-sidebar sidebar:unlock-body-scroll.st.sidebar.st.navbar-sidebar', null, this, onLockBodyScroll);
+            $(document).on('sidebar:lock-body-scroll.fxp.sidebar.fxp.navbar-sidebar sidebar:unlock-body-scroll.fxp.sidebar.fxp.navbar-sidebar', null, this, onLockBodyScroll);
         }
 
         this.$sidebars.each(function (index, sidebar) {
@@ -203,11 +203,11 @@
         });
 
         if (this.$element.hasClass('navbar-fixed-top') || this.$element.hasClass('navbar-fixed-bottom')) {
-            $(document).off('sidebar:lock-body-scroll.st.sidebar.st.navbar-sidebar sidebar:unlock-body-scroll.st.sidebar.st.navbar-sidebar', null, onLockBodyScroll);
+            $(document).off('sidebar:lock-body-scroll.fxp.sidebar.fxp.navbar-sidebar sidebar:unlock-body-scroll.fxp.sidebar.fxp.navbar-sidebar', null, onLockBodyScroll);
         }
 
         this.$element
-            .off('webkitTransitionEnd.st.navbar-sidebar otransitionend.st.navbar-sidebar oTransitionEnd.st.navbar-sidebar msTransitionEnd.st.navbar-sidebar transitionend.st.navbar-sidebar', null, onAnimationEnd)
+            .off('webkitTransitionEnd.fxp.navbar-sidebar otransitionend.fxp.navbar-sidebar oTransitionEnd.fxp.navbar-sidebar msTransitionEnd.fxp.navbar-sidebar transitionend.fxp.navbar-sidebar', null, onAnimationEnd)
             .removeData('st.navbar-sidebar');
 
         delete this.$element;

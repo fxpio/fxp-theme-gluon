@@ -16,26 +16,26 @@ This library uses:
 - moment
 - select2
 - select2-bootstrap-theme
-- sonatra-bootstrap-dropdown-position
-- sonatra-bootstrap-nav-footable
-- sonatra-bootstrap-nav-scroll
-- sonatra-bootstrap-panel-collapse
-- sonatra-footable-responsive
-- sonatra-footable-striped
-- sonatra-jquery-datetime-picker
-- sonatra-jquery-scroller
-- sonatra-jquery-sidebar
-- sonatra-jquery-table-pager
-- sonatra-jquery-table-pager-footable
-- sonatra-jquery-table-select
-- sonatra-select2-responsive
-- sonatra-select2-scroller
+- fxp-bootstrap-dropdown-position
+- fxp-bootstrap-nav-footable
+- fxp-bootstrap-nav-scroll
+- fxp-bootstrap-panel-collapse
+- fxp-footable-responsive
+- fxp-footable-striped
+- fxp-jquery-datetime-picker
+- fxp-jquery-scroller
+- fxp-jquery-sidebar
+- fxp-jquery-table-pager
+- fxp-jquery-table-pager-footable
+- fxp-jquery-table-select
+- fxp-select2-responsive
+- fxp-select2-scroller
 
 Installation
 ------------
 
 ```
-npm install @sonatra/theme-gluon --save
+npm install @fxp/theme-gluon --save
 ```
 
 Dev installation

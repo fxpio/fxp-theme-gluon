@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -71,7 +71,7 @@
             this.options.floatingLabelSelector = null;
         }
 
-        this.$element.on('focusout.st.floating-label change.st.floating-label' + this.guid, this.options.floatingLabelSelector, this, onFocusOut);
+        this.$element.on('focusout.fxp.floating-label change.fxp.floating-label' + this.guid, this.options.floatingLabelSelector, this, onFocusOut);
 
         var $targets = null !== this.options.floatingLabelSelector ? $(this.options.floatingLabelSelector, this.$element)
             : this.$element;
@@ -123,7 +123,7 @@
         var $targets = null !== this.options.floatingLabelSelector ? $(this.options.floatingLabelSelector, this.$element)
                 : this.$element;
 
-        this.$element.off('focusout.st.floating-label change.st.floating-label' + this.guid, this.options.floatingLabelSelector, onFocusOut);
+        this.$element.off('focusout.fxp.floating-label change.fxp.floating-label' + this.guid, this.options.floatingLabelSelector, onFocusOut);
 
         $targets.each(function (index) {
             var $target = $targets.eq(index),

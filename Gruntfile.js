@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -54,17 +54,17 @@ module.exports = function (grunt) {
                     "css/footable.css": "less/footable/footable.less",
                     "css/footable-striped.css": "less/footable-striped/footable-striped.less",
                     "css/select2-bootstrap-theme.css": "less/select2-bootstrap-theme/select2-bootstrap-theme.less",
-                    "css/sonatra-bootstrap-panel-collapse.css": "less/bootstrap-panel-collapse/bootstrap-panel-collapse.less",
-                    "css/sonatra-bootstrap-dropdown-position.css": "less/bootstrap-dropdown-position/bootstrap-dropdown-position.less",
-                    "css/sonatra-bootstrap-nav-scroll.css": "less/bootstrap-nav-scroll/bootstrap-nav-scroll.less",
-                    "css/sonatra-jquery-datetime-picker.css": "less/jquery-datetime-picker/jquery-datetime-picker.less",
-                    "css/sonatra-jquery-scroller.css": "less/jquery-scroller/jquery-scroller.less",
-                    "css/sonatra-jquery-sidebar.css": "less/jquery-sidebar/jquery-sidebar.less",
-                    "css/sonatra-select2-responsive.css": "less/select2-responsive/select2-responsive.less",
-                    "css/sonatra-jquery-table-select.css": "less/jquery-table-select/jquery-table-select.less",
-                    "css/sonatra-jquery-table-pager.css": "less/jquery-table-pager/jquery-table-pager.less",
-                    "css/sonatra-jquery-table-sort.css": "less/jquery-table-pager/jquery-table-sort.less",
-                    "css/sonatra-jquery-ripple.css": "less/jquery-ripple/jquery-ripple.less",
+                    "css/fxp-bootstrap-panel-collapse.css": "less/bootstrap-panel-collapse/bootstrap-panel-collapse.less",
+                    "css/fxp-bootstrap-dropdown-position.css": "less/bootstrap-dropdown-position/bootstrap-dropdown-position.less",
+                    "css/fxp-bootstrap-nav-scroll.css": "less/bootstrap-nav-scroll/bootstrap-nav-scroll.less",
+                    "css/fxp-jquery-datetime-picker.css": "less/jquery-datetime-picker/jquery-datetime-picker.less",
+                    "css/fxp-jquery-scroller.css": "less/jquery-scroller/jquery-scroller.less",
+                    "css/fxp-jquery-sidebar.css": "less/jquery-sidebar/jquery-sidebar.less",
+                    "css/fxp-select2-responsive.css": "less/select2-responsive/select2-responsive.less",
+                    "css/fxp-jquery-table-select.css": "less/jquery-table-select/jquery-table-select.less",
+                    "css/fxp-jquery-table-pager.css": "less/jquery-table-pager/jquery-table-pager.less",
+                    "css/fxp-jquery-table-sort.css": "less/jquery-table-pager/jquery-table-sort.less",
+                    "css/fxp-jquery-ripple.css": "less/jquery-ripple/jquery-ripple.less",
                     "css/gluon.css": "less/gluon/gluon.less"
                 }
             }

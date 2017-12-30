@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -19,7 +19,7 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery', 'sonatra-jquery-sidebar'], factory);
+        define(['jquery', 'fxp-jquery-sidebar'], factory);
     } else {
         // Browser globals
         factory(jQuery);
@@ -68,10 +68,10 @@
         this.$element = $(element);
         this.$context = $(this.options.sidebarContextSelector, this.$element);
 
-        this.$context.on('click.st.sidebar-context', null, this, onSwitch);
+        this.$context.on('click.fxp.sidebar-context', null, this, onSwitch);
 
         if (this.options.sidebarContextCloseOnResize) {
-            $(window).on('resize.st.sidebar-context' + this.guid, null, this, onResizeWindow);
+            $(window).on('resize.fxp.sidebar-context' + this.guid, null, this, onResizeWindow);
         }
     },
         old;
@@ -133,8 +133,8 @@
      * @this SidebarContext
      */
     SidebarContext.prototype.destroy = function () {
-        $(window).off('resize.st.sidebar-context' + this.guid, onResizeWindow);
-        this.$context.off('click.st.sidebar-context', onSwitch);
+        $(window).off('resize.fxp.sidebar-context' + this.guid, onResizeWindow);
+        this.$context.off('click.fxp.sidebar-context', onSwitch);
 
         delete this.$element;
         delete this.$context;

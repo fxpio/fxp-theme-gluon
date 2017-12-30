@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -86,7 +86,7 @@
         this.$body             = $('body');
         this.nativeScrollWidth = getNativeScrollWidth();
 
-        $(document).on('show.bs.modal.st.navbar-modal-' + this.guid + ' hidden.bs.modal.st.navbar-modal-' + this.guid, null, this, onLockBodyScroll);
+        $(document).on('show.bs.modal.fxp.navbar-modal-' + this.guid + ' hidden.bs.modal.fxp.navbar-modal-' + this.guid, null, this, onLockBodyScroll);
     },
         old;
 
@@ -96,7 +96,7 @@
      * @this NavbarModal
      */
     NavbarModal.prototype.destroy = function () {
-        $(document).off('show.bs.modal.st.navbar-modal-' + this.guid + ' hidden.bs.modal.st.navbar-modal-' + this.guid, null, onLockBodyScroll);
+        $(document).off('show.bs.modal.fxp.navbar-modal-' + this.guid + ' hidden.bs.modal.fxp.navbar-modal-' + this.guid, null, onLockBodyScroll);
         this.$element.removeData('st.navbar-modal');
 
         delete this.$element;

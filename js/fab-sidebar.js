@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -19,7 +19,7 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery', 'sonatra-jquery-sidebar'], factory);
+        define(['jquery', 'fxp-jquery-sidebar'], factory);
     } else {
         // Browser globals
         factory(jQuery);
@@ -119,8 +119,8 @@
         this.options   = $.extend(true, {}, FabSidebar.DEFAULTS, options);
         this.$element  = $(element);
 
-        $(document).on('sidebar:force-open.st.sidebar.st.fab-sidebar sidebar:open.st.sidebar.st.fab-sidebar sidebar:close.st.sidebar.st.fab-sidebar', null, this, onLockBodyScroll);
-        $(window).on('resize.st.fab-sidebar' + this.guid, null, this, onResizeWindow);
+        $(document).on('sidebar:force-open.fxp.sidebar.fxp.fab-sidebar sidebar:open.fxp.sidebar.fxp.fab-sidebar sidebar:close.fxp.sidebar.fxp.fab-sidebar', null, this, onLockBodyScroll);
+        $(window).on('resize.fxp.fab-sidebar' + this.guid, null, this, onResizeWindow);
     },
         old;
 
@@ -142,8 +142,8 @@
         }
 
         changeTransform(this.$element, '');
-        $(document).off('sidebar:force-open.st.sidebar.st.fab-sidebar sidebar:open.st.sidebar.st.fab-sidebar sidebar:close.st.sidebar.st.fab-sidebar', null, onLockBodyScroll);
-        $(window).off('resize.st.fab-sidebar' + this.guid, onResizeWindow);
+        $(document).off('sidebar:force-open.fxp.sidebar.fxp.fab-sidebar sidebar:open.fxp.sidebar.fxp.fab-sidebar sidebar:close.fxp.sidebar.fxp.fab-sidebar', null, onLockBodyScroll);
+        $(window).off('resize.fxp.fab-sidebar' + this.guid, onResizeWindow);
 
         this.$element
             .removeData('st.fab-sidebar');
