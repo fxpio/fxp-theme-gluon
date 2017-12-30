@@ -4,12 +4,16 @@
 
 // Button flat
 .btn {
-  white-space: pre-wrap;
+  white-space: normal;
   word-wrap: break-word;
   .button-variant-flat();
 
   .input-group-btn & {
     white-space: normal;
+  }
+
+  &.pre-wrap {
+    white-space: pre-wrap;
   }
 }
 
