@@ -1,4 +1,4 @@
-{% extends "examples/base.html" %}
+{% extends "base.html" %}
 
 {% block head_style %}
 <style>
@@ -30,38 +30,38 @@
 {% set sidebarItems = sidebarItems|default([
         {label: 'Home', href: '/', icon: 'home'},
         {label: 'Styles', children: [
-            {label: 'Typography', href: '/style/typography.html', icon: 'fa fa-font'},
-            {label: 'Code', href: '/style/code.html', icon: 'fa fa-code'},
-            {label: 'Images', href: '/style/images.html', icon: 'fa fa-image'},
-            {label: 'Shadows', href: '/style/shadows.html', icon: 'fa fa-cube'}
+            {label: 'Typography', href: '/style/typography', icon: 'fa fa-font'},
+            {label: 'Code', href: '/style/code', icon: 'fa fa-code'},
+            {label: 'Images', href: '/style/images', icon: 'fa fa-image'},
+            {label: 'Shadows', href: '/style/shadows', icon: 'fa fa-cube'}
         ]},
         {label: 'Components', children: [
-            {label: 'Forms', href: '/components/forms.html', icon: 'fa fa-th-list'},
-            {label: 'Selects', href: '/components/selects.html', icon: 'fa fa-toggle-down'},
-            {label: 'Checkbox / Radio', href: '/components/checkbox-radio.html', icon:'fa fa-check-square'},
-            {label: 'Toggles', href: '/components/toggles.html', icon: 'fa fa-toggle-on'},
-            {label: 'Datetime picker', href: '/components/datetime-picker.html', icon: 'fa fa-calendar-check-o'},
-            {label: 'Buttons', href: '/components/buttons.html', icon: 'fa fa-plus-square'},
-            {label: 'FAB', href: '/components/fab.html', icon: 'fa fa-plus-circle'},
-            {label: 'Dropdowns', href: '/components/dropdowns.html', icon: 'fa fa-toggle-down'},
-            {label: 'Thumbnails', href: '/components/thumbnails.html', icon: 'fa fa-image'},
-            {label: 'Tables', href: '/components/tables.html', icon: 'fa fa-table'},
-            {label: 'Panels', href: '/components/panels.html', icon: 'fa fa-columns'},
-            {label: 'Tabs / Pills', href: '/components/tabs-pills.html', icon: 'fa fa-th'},
-            {label: 'List group', href: '/components/list-group.html', icon: 'fa fa-list'},
-            {label: 'Badges', href: '/components/badges.html', icon: 'fa fa-sticky-note'},
-            {label: 'Labels', href: '/components/labels.html', icon: 'fa fa-diamond'},
-            {label: 'Pagination', href: '/components/pagination.html', icon: 'fa fa-sort-numeric-asc'},
-            {label: 'Wells', href: '/components/wells.html', icon: 'fa fa-rocket'},
-            {label: 'Breadcrumbs', href: '/components/breadcrumbs.html', icon: 'fa fa-link'},
-            {label: 'Alerts', href: '/components/alerts.html', icon: 'fa fa-bell'},
-            {label: 'Modals', href: '/components/modals.html', icon: 'fa fa-question-circle'},
-            {label: 'Progress bars', href: '/components/progress-bars.html', icon: 'fa fa-circle-o-notch'},
-            {label: 'Spinners', href: '/components/spinners.html', icon: 'fa fa-spinner'},
-            {label: 'ScrollSpy', href: '/components/scroll-spy.html', icon: 'fa fa-road'},
-            {label: 'Tooltips', href: '/components/tooltips.html', icon: 'fa fa-info-circle'},
-            {label: 'Popovers', href: '/components/popovers.html', icon: 'fa fa-question-circle'},
-            {label: 'Carousel', href: '/components/carousel.html', icon: 'fa fa-image'}
+            {label: 'Forms', href: '/components/forms', icon: 'fa fa-th-list'},
+            {label: 'Selects', href: '/components/selects', icon: 'fa fa-toggle-down'},
+            {label: 'Checkbox / Radio', href: '/components/checkbox-radio', icon:'fa fa-check-square'},
+            {label: 'Toggles', href: '/components/toggles', icon: 'fa fa-toggle-on'},
+            {label: 'Datetime picker', href: '/components/datetime-picker', icon: 'fa fa-calendar-check-o'},
+            {label: 'Buttons', href: '/components/buttons', icon: 'fa fa-plus-square'},
+            {label: 'FAB', href: '/components/fab', icon: 'fa fa-plus-circle'},
+            {label: 'Dropdowns', href: '/components/dropdowns', icon: 'fa fa-toggle-down'},
+            {label: 'Thumbnails', href: '/components/thumbnails', icon: 'fa fa-image'},
+            {label: 'Tables', href: '/components/tables', icon: 'fa fa-table'},
+            {label: 'Panels', href: '/components/panels', icon: 'fa fa-columns'},
+            {label: 'Tabs / Pills', href: '/components/tabs-pills', icon: 'fa fa-th'},
+            {label: 'List group', href: '/components/list-group', icon: 'fa fa-list'},
+            {label: 'Badges', href: '/components/badges', icon: 'fa fa-sticky-note'},
+            {label: 'Labels', href: '/components/labels', icon: 'fa fa-diamond'},
+            {label: 'Pagination', href: '/components/pagination', icon: 'fa fa-sort-numeric-asc'},
+            {label: 'Wells', href: '/components/wells', icon: 'fa fa-rocket'},
+            {label: 'Breadcrumbs', href: '/components/breadcrumbs', icon: 'fa fa-link'},
+            {label: 'Alerts', href: '/components/alerts', icon: 'fa fa-bell'},
+            {label: 'Modals', href: '/components/modals', icon: 'fa fa-question-circle'},
+            {label: 'Progress bars', href: '/components/progress-bars', icon: 'fa fa-circle-o-notch'},
+            {label: 'Spinners', href: '/components/spinners', icon: 'fa fa-spinner'},
+            {label: 'ScrollSpy', href: '/components/scroll-spy', icon: 'fa fa-road'},
+            {label: 'Tooltips', href: '/components/tooltips', icon: 'fa fa-info-circle'},
+            {label: 'Popovers', href: '/components/popovers', icon: 'fa fa-question-circle'},
+            {label: 'Carousel', href: '/components/carousel', icon: 'fa fa-image'}
         ]},
         {label: 'Settings', href: '#', icon: 'fa fa-cog'},
         {label: 'Help and support', href: '#', icon: 'fa fa-support'},
@@ -78,7 +78,7 @@
     <ul class="sidebar-menu with-icons">
         {% block sidebar_header %}
         <li class="sidebar-header">
-            <img class="sidebar-header-img" src="/assets/badge_inverse.svg">
+            <img class="sidebar-header-img" src="/assets/images/badge_inverse.svg">
 
             <span class="sidebar-header-profile-icon">JD</span>
             <span class="sidebar-header-title sidebar-menu-toggle">
@@ -118,8 +118,8 @@
             </button>
             <div class="btn-group">
                 <a class="navbar-brand navbar-brand-switch sidebar-full-locked" href="/">
-                    <img class="navbar-brand-badge" src="../assets/badge_inverse.svg">
-                    <img class="navbar-brand-logo" src="../assets/logo_inverse.svg">
+                    <img class="navbar-brand-badge" src="/assets/images/badge_inverse.svg">
+                    <img class="navbar-brand-logo" src="/assets/images/logo_inverse.svg">
                 </a>
             </div>
             <div class="navbar-title">

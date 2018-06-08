@@ -1,6 +1,4 @@
-css/
-fonts/
+build/
 node_modules/
 package-lock.json
 yarn.lock
-.rebooted

@@ -17,6 +17,11 @@
   "bugs": {
     "url": "https://github.com/fxpio/fxp-theme-gluon/issues"
   },
+  "scripts": {
+    "dev": "encore dev",
+    "serve": "encore dev-server --port 9000",
+    "build": "encore production"
+  },
   "engines": {},
   "dependencies": {
     "@fxp/bootstrap-dropdown-position": "github:fxpio/fxp-bootstrap-dropdown-position#master",
@@ -29,35 +34,30 @@
     "@fxp/jquery-ripple": "github:fxpio/fxp-jquery-ripple#master",
     "@fxp/jquery-scroller": "github:fxpio/fxp-jquery-scroller#master",
     "@fxp/jquery-sidebar": "github:fxpio/fxp-jquery-sidebar#master",
+    "@fxp/jquery-table-pager": "github:fxpio/fxp-jquery-table-pager#master",
     "@fxp/jquery-table-pager-footable": "github:fxpio/fxp-jquery-table-pager-footable#master",
     "@fxp/jquery-table-select": "github:fxpio/fxp-jquery-table-select#master",
-    "@fxp/jquery-table-pager": "github:fxpio/fxp-jquery-table-pager#master",
     "@fxp/select2-responsive": "github:fxpio/fxp-select2-responsive#master",
     "@fxp/select2-scroller": "github:fxpio/fxp-select2-scroller#master",
-    "select2-bootstrap-theme": "^0.1.0-beta.10",
     "autosize": "^3.0.0",
-    "headroom.js": "^0.7.0",
     "bootstrap-filestyle": "^1.2.0",
-    "jquery": "^2.2.0||^3.2.0"
+    "headroom.js": "^0.7.0",
+    "jquery": "^2.2.0||^3.2.0",
+    "select2-bootstrap-theme": "^0.1.0-beta.10"
   },
   "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1",
+    "bootstrap": "^3.3.7",
+    "copy-webpack-plugin": "^4.5.1",
+    "express-nunjucks": "^2.2.3",
     "font-awesome": "^4.7.0",
-    "grunt": "^1.0.1",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-concurrent": "^2.0.3",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-less": "^1.4.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-nodemon": "^0.4.0",
-    "grunt-nunjucks": "^0.1.4",
     "holderjs": "^2.8.0",
     "html5shiv": "^3.7.0",
-    "load-grunt-tasks": "^3.5.2",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
     "mime": "^1.3.4",
     "nunjucks": "^2.3.0",
-    "requirejs": "^2.3.5",
     "respond.js": "^1.4.0",
-    "time-grunt": "^1.4.0"
+    "uglifyjs-webpack-plugin": "^1.2.5"
   }
 }
