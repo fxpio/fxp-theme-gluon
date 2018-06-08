@@ -19,12 +19,12 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
+        define(['jquery', 'autosize'], factory);
     } else {
         // Browser globals
-        factory(jQuery);
+        factory(jQuery, autosize);
     }
-}(function ($) {
+}(function ($, autosize) {
     'use strict';
 
     // RESIZING TEXTAREA CLASS DEFINITION

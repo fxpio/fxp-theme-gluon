@@ -19,7 +19,7 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery', 'fxp-jquery-sidebar'], factory);
+        define(['jquery', '@fxp/jquery-sidebar'], factory);
     } else {
         // Browser globals
         factory(jQuery);
