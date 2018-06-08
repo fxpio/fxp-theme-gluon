@@ -28,7 +28,6 @@ import 'font-awesome/less/font-awesome.less';
 
 import $ from 'jquery';
 import '../js/scroller-shrink';
-import 'headroom.js';
 import 'bootstrap/js/transition';
 import 'bootstrap/js/modal';
 import 'bootstrap/js/dropdown';

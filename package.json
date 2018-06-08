@@ -31,6 +31,7 @@
     "@fxp/footable-responsive": "github:fxpio/fxp-footable-responsive#master",
     "@fxp/footable-striped": "github:fxpio/fxp-footable-striped#master",
     "@fxp/jquery-datetime-picker": "github:fxpio/fxp-jquery-datetime-picker#master",
+    "@fxp/jquery-pluginify": "github:fxpio/fxp-jquery-pluginify#master",
     "@fxp/jquery-ripple": "github:fxpio/fxp-jquery-ripple#master",
     "@fxp/jquery-scroller": "github:fxpio/fxp-jquery-scroller#master",
     "@fxp/jquery-sidebar": "github:fxpio/fxp-jquery-sidebar#master",
