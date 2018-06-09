@@ -13,6 +13,7 @@ import $ from 'jquery';
 import {onResizeWindow} from './utils/events';
 import {changeTransform} from './utils/css';
 import {onLockBodyScroll} from './utils/scrollbar';
+import '@fxp/jquery-sidebar';
 
 /**
  * FabSidebar class.

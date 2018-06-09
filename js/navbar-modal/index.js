@@ -12,6 +12,7 @@ import BasePlugin from '@fxp/jquery-pluginify/js/plugin';
 import $ from 'jquery';
 import {getNativeScrollWidth} from '../utils/window';
 import {onLockBodyScroll} from './utils/scrollbar';
+import 'bootstrap/js/modal';
 
 /**
  * Navbar Modal class.

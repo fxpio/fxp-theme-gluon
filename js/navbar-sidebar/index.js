@@ -10,9 +10,9 @@
 import pluginify from '@fxp/jquery-pluginify';
 import BasePlugin from '@fxp/jquery-pluginify/js/plugin';
 import $ from 'jquery';
-import '@fxp/jquery-sidebar';
 import {onAnimationEnd, refreshPosition} from "./utils/css";
 import {onLockBodyScroll} from "./utils/scrollbar";
+import '@fxp/jquery-sidebar';
 
 /**
  * Navbar Sidebar class.

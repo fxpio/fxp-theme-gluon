@@ -11,6 +11,7 @@ import pluginify from '@fxp/jquery-pluginify';
 import BasePlugin from '@fxp/jquery-pluginify/js/plugin';
 import $ from 'jquery';
 import {onResizeWindow, onSwitch} from './utils/events';
+import '@fxp/jquery-sidebar';
 
 /**
  * Sidebar Context class.
