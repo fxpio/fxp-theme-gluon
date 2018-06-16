@@ -54,7 +54,7 @@ export default class NavbarSidebar extends BasePlugin
         }
 
         this.$sidebars.each(function (index, sidebar) {
-            let sidebarInstance = $(sidebar).data('st.sidebar'),
+            let sidebarInstance = $(sidebar).data('fxp.sidebar'),
                 $sidebar = sidebarInstance.$element;
 
             if ($sidebar.hasClass('sidebar-locked')) {
@@ -81,9 +81,9 @@ export default class NavbarSidebar extends BasePlugin
         this.$lockedSidebars.each(function (index, sidebar) {
             let $sidebar = $(sidebar);
 
-            if (undefined !== $sidebar.data('st.refresh-scroller-delay')) {
-                clearTimeout($sidebar.data('st.refresh-scroller-delay'));
-                $sidebar.removeData('st.refresh-scroller-delay');
+            if (undefined !== $sidebar.data('fxp.refresh-scroller-delay')) {
+                clearTimeout($sidebar.data('fxp.refresh-scroller-delay'));
+                $sidebar.removeData('fxp.refresh-scroller-delay');
             }
         });
 

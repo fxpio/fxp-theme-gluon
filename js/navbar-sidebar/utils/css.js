@@ -48,19 +48,19 @@ function refreshPositionTop (self, top) {
 
     self.$lockedSidebars.each(function (index, sidebar) {
         let $sidebar = $(sidebar),
-            data = $sidebar.data('st.sidebar');
+            data = $sidebar.data('fxp.sidebar');
 
         if (data !== undefined) {
             data.$element.css('top', top);
             data.$swipe.css('top', top);
 
-            if (undefined !== $sidebar.data('st.refresh-scroller-delay')) {
-                clearTimeout($sidebar.data('st.refresh-scroller-delay'));
-                $sidebar.removeData('st.refresh-scroller-delay');
+            if (undefined !== $sidebar.data('fxp.refresh-scroller-delay')) {
+                clearTimeout($sidebar.data('fxp.refresh-scroller-delay'));
+                $sidebar.removeData('fxp.refresh-scroller-delay');
             }
 
-            $sidebar.data('st.refresh-scroller-delay', window.setTimeout(function () {
-                $sidebar.removeData('st.refresh-scroller-delay');
+            $sidebar.data('fxp.refresh-scroller-delay', window.setTimeout(function () {
+                $sidebar.removeData('fxp.refresh-scroller-delay');
                 data.refresh();
             }, self.options.refreshDelay));
         }
