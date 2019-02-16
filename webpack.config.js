@@ -14,11 +14,19 @@ const config = Encore
     .setOutputPath('build/assets')
     .setPublicPath('/assets')
     .disableSingleRuntimeChunk()
-    .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
-    .cleanupOutputBeforeBuild()
     .autoProvidejQuery()
+    .enableSourceMaps(!Encore.isProduction())
+    .cleanupOutputBeforeBuild()
     .enableLessLoader()
+    .addLoader(
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['@babel/preset-env'],
+            },
+        }
+    )
     .addEntry('main', './examples/main.js')
     .copyFiles({
         from: './assets',
